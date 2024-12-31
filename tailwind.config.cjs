@@ -60,7 +60,8 @@ module.exports = {
         }
       },
       fontFamily: {
-        mono: ["IBM Plex Mono", "monospace"],
+        mono: ["Helvetica Neue", "IBM Plex Mono", "monospace"],
+        // mono: ["IBM Plex Mono", "monospace"],
       },
 
       typography: {
@@ -68,9 +69,11 @@ module.exports = {
           css: {
             pre: {
               color: false,
+              fontFamily: "IBM Plex Mono",
             },
             code: {
               color: false,
+              fontFamily: "IBM Plex Mono",
             },
           },
         },
