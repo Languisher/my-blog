@@ -7,7 +7,7 @@ slug: deploy-blog # should be replaced
 featured: false # check
 draft: false # check
 tags:
-  - test # should be replaced
+  - blog # should be replaced
 description:
   test description # should be replaced
 ---
