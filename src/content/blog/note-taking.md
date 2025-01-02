@@ -7,7 +7,7 @@ slug: what-is-the-purpose-of-writing-notes # should be replaced
 featured: true # check
 draft: false # check
 tags:
-  - test # should be replaced
+  - misc. # should be replaced
 description:
   We have written notes since elementary school, continuously taking courses and learning new knowledge daily. However, this does not necessarily mean we're experts in taking notes. I have been trying to figure out the method with the highest efficiency, and here are some of my thoughts.
 ---
