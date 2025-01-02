@@ -2,14 +2,14 @@
 author: Nan Lin # should be replaced
 pubDatetime: 2025-01-01T15:00:00Z # should be replaced
 modDatetime: 2025-01-01T15:00:00.000Z
-title: Information and Entropy # should be replaced
+title: ICT 1-Information and Entropy # should be replaced
 slug: information-and-coding-theory-1 # should be replaced
 featured: false # check
 draft: false # check
 tags:
-  - Information # should be replaced
+  - Information Theory # should be replaced
 description:
-  test description # should be replaced
+  Note of Course ICE4411P-Information Theory and Coding # should be replaced
 ---
 
 ## Table of contents
