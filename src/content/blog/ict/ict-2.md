@@ -1,7 +1,7 @@
 ---
 author: Nan Lin # should be replaced
-pubDatetime: 2025-01-02T15:00:00Z # should be replaced
-modDatetime: 2025-01-02T15:00:00.000Z
+pubDatetime: 2025-01-02T08:00:00Z # should be replaced
+modDatetime: 2025-01-02T08:00:00.000Z
 title: ICT 2-Channel and Channel Capacity # should be replaced
 slug: information-and-coding-theory-2 # should be replaced
 featured: false # check
@@ -20,7 +20,7 @@ Thursday, January 2, 2025
 ### Definition of the Mutual Information
 
 **Mutual information**: Information obtained (or "delivered") through the transmission of the symbol.
-- Source send $X = x_i$, Destination received $Y = y_j$.
+- Source sent $X = x_i$, Destination received $Y = y_j$.
 - The receiver wants to deduce $X = ?$ based on the served message symbol $y_j$. Ideally, $x_{i}= y_{j}$.
 - Information obtained = Uncertainty reduced.
 - Amount of uncertainty reduced: Prior uncertainty about $X = x_i$ - Uncertainty about $X = x_i$ left after receiving $Y =y_j$
@@ -33,8 +33,8 @@ $$
 ### Properties of the Mutual Information
 
 *Ideal case: Precise transmission*: 
-- 100% confidence in symbol mapping
-- $p(x_{i}| y_{j}) = 1$. 
+- 100% correctness.
+- $p(x_{i}| y_{j}) = 1$ therefore uncertainty is zero.
 - Thus $I(x_{i};y_{j})=I(x_{i})$.
 
 *Common case*:
@@ -56,7 +56,7 @@ $$
 
 ### Average Mutual Information
 
-**Average Mutual Information**: Quantify the amount of the information passing through the channel.
+**Average Mutual Information**: Quantify the amount of information passing through the channel.
 - Evaluate the average amount of information delivered from src to dst.
 - Mathematical expectation of overall mutual information between symbols of two sources.
 - Depend on the transmission probability matrix.
@@ -89,7 +89,7 @@ Channel could be modeled as $\{ X, p(Y|X), Y \}$.
 
 A channel is **lossless** when the loss entropy $H(X|Y)$ is zero. (All information of the source is transmitted to the source)
 
-A channel is **noiseless** when the noise entropy $H(Y|X)$ is zero. (The destination is only receiving message coming from the unique source)
+A channel is **noiseless** when the noise entropy $H(Y|X)$ is zero. (The destination only accepts messages from a unique source.)
 
 Ideal situation: A channel is simultaneously lossless and noiseless.
 ### Channel Capacity
@@ -104,4 +104,8 @@ $$
 C = \max_{p(x)} I(X;Y)
 $$
 
-> To calculate the channel's capacity, is to find the maximum of the mutual information between the source and the destination. The case of maxima usually appears based on the maximum discrete entropy theorem.
+How to calculate the channel's capacity? 
+- Find the maximum of the mutual information between the source and the destination. 
+- The case of maxima usually appears based on the maximum discrete entropy theorem.
+
+

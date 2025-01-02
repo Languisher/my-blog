@@ -1,7 +1,7 @@
 ---
 author: Nan Lin # should be replaced
-pubDatetime: 2025-01-01T15:00:00Z # should be replaced
-modDatetime: 2025-01-01T15:00:00.000Z
+pubDatetime: 2025-01-01T08:00:00Z # should be replaced
+modDatetime: 2025-01-01T08:00:00.000Z
 title: ICT 1-Information and Entropy # should be replaced
 slug: information-and-coding-theory-1 # should be replaced
 featured: false # check
