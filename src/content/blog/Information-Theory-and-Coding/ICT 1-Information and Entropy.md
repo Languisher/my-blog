@@ -67,7 +67,8 @@ X \\ P
 x_{1} \ x_{2} \ \dots x_{n} \\
 p(x_{i}|x_{i-1}x_{i-2}\dots x_{i-m})
 \end{bmatrix}
-$$ where $$p(x_{i}|x_{i-1}\dots x_{i-m}) = (p_{\alpha,i})_{\alpha \in n^m, \; \beta \in n} = \begin{bmatrix}
+$$ 
+where $$p(x_{i}|x_{i-1}\dots x_{i-m}) = (p_{\alpha,i})_{\alpha \in n^m, \; \beta \in n} = \begin{bmatrix}
 p(x_{1}x_{1}\dots x_{1}\to x_{1}) & \dots & p(x_{1}x_{1}\dots x_{1}\to x_{n}) \\
 \vdots  & \ddots &\vdots  \\
 p(x_{n}x_{n}\dots x_{n}\to x_{1}) & \dots & p(x_{n}x_{n}\dots x_{n } \to x_{n})
