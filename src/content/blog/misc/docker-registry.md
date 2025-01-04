@@ -1,26 +1,24 @@
 ---
 author: Nan Lin # should be replaced
-pubDatetime: 2025-01-04T00:00:00Z # should be replaced
-modDatetime: 2025-01-04T00:00:00.000Z
-title: Docker Image Download Solution (CN) # should be replaced
+pubDatetime: 2024-11-17T00:00:00Z # should be replaced
+modDatetime: 2024-11-17T00:00:00.000Z
+title: Docker Daemon Configuration (CN) # should be replaced
 slug: docker-registry # should be replaced
 featured: false # check
 draft: false # check
 tags:
   - docker # should be replaced
 description:
-  解决 Docker Image 在国内无法下载的问题 # should be replaced
+  解决 Docker 在国内无法连接的问题 # should be replaced
 ---
-> Update: Nov. 17th, 2024
 
 ## Table of contents
-
-Saturday, January 4, 2025
+> Update: Nov. 17th, 2024
 
 
 本文解决无法进行 Docker pull 或者 push 的问题。
 
-## 一、查找可用的代理站点
+## 查找可用的代理站点
 
 在撰写本文的时刻，可以搜到由 Coderjia 整理的可用代理表格：
 
@@ -39,7 +37,7 @@ Saturday, January 4, 2025
 ```bash
 {
     "registry-mirrors": [
-        "<https://docker.unsee.tech>"
+        "https://docker.unsee.tech" # replace it
 		]
 }
 ```
