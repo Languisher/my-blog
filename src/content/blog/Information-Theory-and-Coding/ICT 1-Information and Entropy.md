@@ -11,7 +11,6 @@ tags:
 description:
   Note of Course ICE4411P-Information Theory and Coding # should be replaced
 ---
-
 ## Table of contents
 
 Wednesday, January 1, 2025
@@ -46,7 +45,7 @@ X^N \\ P
 p(\alpha_1) & p(\alpha_2) & \dots & p(\alpha_n)
 \end{bmatrix}
 $$
-> Note that $p(\alpha_{i}) = p(x_{i_{1}}x_{i_{2}} \dots x_{i_{N}})= \prod_{k=1}^N p(x_{i_{k}})$ since the source is memoryless.
+> Note that $p(\alpha_{i}) = p(x_{i_{1}}x_{i_{2}} \dots x_{i_{N}})= \prod_{k=1}^N p(x_{i_{k}})$ if the source is memoryless.
 
 
 **Single-symbol continuous**:

@@ -11,7 +11,6 @@ tags:
 description:
   Note of Course ICE4411P-Information Theory and Coding # should be replaced
 ---
-
 ## Table of contents
 
 Thursday, January 2, 2025
