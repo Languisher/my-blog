@@ -1,28 +1,27 @@
 ---
-author: Nan Lin # should be replaced
-pubDatetime: 2025-01-01T08:00:00Z # should be replaced
-modDatetime: 2025-01-01T08:00:00.000Z
-title: ICT 1-Information and Entropy # should be replaced
-slug: information-and-coding-theory-1 # should be replaced
-featured: false # check
-draft: false # check
+author: Nan Lin
+pubDatetime: 2025-01-01T08:00:00Z
+modDatetime: 2025-01-04T08:00:00.000Z
+title: ICT 1-Information and Entropy
+slug: information-and-coding-theory-1
+featured: false
+draft: false
 tags:
-  - Information Theory # should be replaced
-description:
-  Note of Course ICE4411P-Information Theory and Coding # should be replaced
+  - Information
+  - Theory
+description: Note of Course ICE4411P-Information Theory and Coding
 ---
 ## Table of contents
 
-Wednesday, January 1, 2025
 ## Mathematic Model of the Source
 
 *The process of the source sending the "message" could be modeled as a random variable*:
-- The output of the source cannot be determined with certainty beforehand. For example, we cannot predict the exact outcome of the event before it occurs, making it inherently stochastic.
+- The output of the source cannot be 100% determined beforehand. For example, we cannot predict the exact outcome of the event before it occurs, making it inherently stochastic.
 - We can use a probabilistic framework to describe the likelihood of different possible outcomes by treating the source as a random variable.
 
-Below is a revision of the mathematical models of random variables based on the essence of the source.
 ### Memoryless Source
 
+Below is a revision of the mathematical models of random variables based on the essence of the source.
 
 **Single-symbol discrete**:
 $$
@@ -69,7 +68,11 @@ X \\ P
 x_{1} \ x_{2} \ \dots x_{n} \\
 p(x_{i}|x_{i-1}x_{i-2}\dots x_{i-m})
 \end{bmatrix}
-$$
+$$ where $$p(x_{i}|x_{i-1}\dots x_{i-m}) = (p_{\alpha,i})_{\alpha \in n^m, \; \beta \in n} = \begin{bmatrix}
+p(x_{1}x_{1}\dots x_{1}\to x_{1}) & \dots & p(x_{1}x_{1}\dots x_{1}\to x_{n}) \\
+\vdots  & \ddots &\vdots  \\
+p(x_{n}x_{n}\dots x_{n}\to x_{1}) & \dots & p(x_{n}x_{n}\dots x_{n } \to x_{n})
+\end{bmatrix}$$ 
 
 > Note that the $p$ is a probability matrix with dimension $n^m \times n$.
 
@@ -81,8 +84,7 @@ $$
 
 Here, *the term uncertainty measures the observer's lack of confidence or predictability regarding its occurrence.*
 
-> The term "uncertainty" doesn't imply the certainty that the event will not happen; it refers to the observer's inability to confidently predict the outcome or assign high certainty to either possibility.
-
+The term "uncertainty" doesn't imply the certainty that the event will not happen; it refers to the observer's inability to confidently predict the outcome or assign high certainty to either possibility.
 
 Uncertainty is highest not just when probabilities are low but when they are neither high nor low (close to 0.5).
 
@@ -90,6 +92,9 @@ Uncertainty also reflects the extent of surprise of the observer when the event 
 
 ### Self-Information: Mathematic Modeling of Uncertainty
 
+The process of obtaining information could be interpreted as:
+- Formally have little confidence in the occurrence of what symbol the source sends.
+- After observation, we know that the source has a higher probability of sending certain variables compared to others.
 
 **Self-information** about a specific event is a mathematical interpretation of "uncertainty." The self-information of a random event $X = x_i$ is:
 $$
@@ -138,7 +143,6 @@ $$
 I(x_{i};y_{j}) = I(x_{i}) - I(x_{i}|y_{j}) =  \log \frac{p(x_{i}|y_{j})}{p(x_{i})} = \log \frac{p(x_{i}y_{j})}{p(x_{i})p(y_{j})}
 $$
 
-### Properties of Mutual Information
 
 ## Information Entropy of Single-Symbol Discrete Memoryless Sources
 
@@ -154,7 +158,7 @@ $$
 \bar{I} = - \sum_{i=1}^n \frac{m_{i}}{N} \log p(x_{i}) \approx - \sum_{i=1}^n p(x_{i})\log p(x_{i})
 $$
 
-Observe from the formula, it is also the *expectation of the self-information*:
+It is also the *expectation of the self-information*:
 $$
 \bar{I} = \mathbb{E}[I(X = x_{i})]
 $$
@@ -162,14 +166,12 @@ $$
 **Information Entropy** of a discrete source (described as a random variable), denoted as $H(X)$, is:
 - The average amount of information per symbol of a sequence after the source sends the message.
 - Expectation of the self-information (of the message sent by the source).
-- _Measure of the average uncertainty of the memoryless source._
+- _Measure of the average self-information (uncertainty or disorderness) of the memoryless source._
 $$
 H(X) = \mathbb{E}[I(X=x_{i})] = -\sum_{i=1}^n p(x_{i}) \log p(x_{i})
 $$
 
 > Note that $p(x_{i}) \log p(x_{i}) = 0$ if $p(x_{i}) = 0$.
-
-
 
 ### Joint Entropy and Condition Entropy: Between Different Sources
 
@@ -196,7 +198,7 @@ $$
 5. *Increasing*. If divide one single symbol into several symbols, the overall entropy will increase.
 6. *Upper convexity*, shape like $\cap$.
 7. *Extremum property*: $$H(p_{1}, p_{2}, \dots, p_{n}) \leq H\left( \frac{1}{n}, \frac{1}{n}, \dots, \frac{1}{n} \right)$$
-
+### Maximum Discrete Entropy Theorem
 **Maximum discrete entropy theorem**: For a discrete memoryless source $X$ whose sample space contains $n$ symbols, the entropy arrives at its maximum when all of the occurrence of the symbols is identical, i.e.
 $$
 H(X) \leq H_{\max} = H\left( \frac{1}{n}, \frac{1}{n}, \dots, \frac{1}{n} \right) = \log n
@@ -220,9 +222,109 @@ H(XY) = H(X) + H(Y|X) = H(Y) + H(X|Y)
 $$
 > Note: $H(XY) = H(X) + H(Y)$ if $X$ and $Y$ are s-independent.
 
+![](attachments/Relationship%20Between%20Different%20Kinds%20of%20Entropies.png)
+
+### Relationship Between Different Kinds of Entropies
+![](attachments/Relationship.png)
+
+![](attachments/CleanShot%202025-01-04%20at%2019.30.01@2x.png)
+
+## Information Entropy of Multiple-Symbol Discrete Sources
+
+### Memoryless Source and Memoryless Stationary Source
+
+*If the source is memoryless, the entropy of the sequence is the sum of the entropy of all the elements in the sequence*: denote the sequence as $X^N = (X_1 \dots X_{N})$
+$$
+H(X^N) = H(X_{1}\dots X_{N}) = \sum_{i=1}^NH(X_{i})
+$$
+(Hint: $\log p(x_{i_{1}}\dots x_{i_{N}}) = \log p(x_{i_{1}}) + \dots + \log p(x_{i_{N}})$)
+
+*Moreover, it the source is stationary (i.e. all probability distribution of the symbols are identical), the entropy of the sequence is the length of the sequence multiply by the entropy of a single symbol.* This is to say, 
+$$
+H(X_{1}) = \dots= H(X_{N}) \implies H(X^N) = \sum_{i=1}^N H(X_{i}) = NH(X)
+$$
 
 
-### Relationship Between Different Kind of Entropies
+### Stationary Source with Memory
 
-![](attachments/Relationship%20Between%20Different%20Kinds%20of%20Entropies.png)![](attachments/Relationship.png)
+The **chain rule**:
+$$
+H(X^N) = H(X_{1})  + H(X_{2}|X_{1}) + \dots + H(X_{N}| X_{1}\dots X_{N-1}) = \sum_{i}^N H(X_{i}|X^{i-1})
+$$
 
+(Hint: proof is similar, use the property of $\log p$)
+
+### Average Symbol Entropy
+
+The **average symbol entropy** is the _amount of information contained (averagely) in each symbol of the symbol sequence with length $N$._ This is a _statistical average._
+
+$$
+H_{N}(X) = \frac{H(X^N)}{N}
+$$
+
+When the source is memoryless, clearly $H_{N}(X) = H(X)$.
+
+The average symbol entropy has the following properties:
+- *Decreases as $N$ increases*: Any new term is smaller than all of its former terms, thus the average is monotone decreasing. I.e. $$H(X_{N}| X_{1}\dots X_{N-1}) \leq H(X_{N-1}| X_{1}\dots X_{N-2})\leq \dots \leq H(X_{2}|X_{1}) \leq H(X_{1})= H(X)$$
+- $N_{1} > N_{2}$, $H_{N_{1}}(X) < H_{N_{2}}(X)$
+- *Existence of limit when the sequence is infinitely long*: $H_{\infty}(X) = H_{N\to \infty} (X^N)$
+
+### Transmission Efficiency and Source Redundancy
+
+**Transmission Efficiency** is 
+- the efficiency of the source.
+- (realistic case) the entropy needed to be transmitted divided by the (imagined case) maximum entropy could be delivered using the same sets of symbols: 
+$$
+\eta = \frac{H_{\infty}(X)}{H_{0}(X)}
+$$
+
+On the contrary, **Source redundancy** is the inefficiency of the source:
+$$
+\gamma = 1- \eta
+$$
+## Information Entropy of Continuous Sources
+
+### Definitions of Entropies
+
+Properties:
+- The information entropy of any continuous sources is infinite and non-negative.
+- But, between two sources, if they use the same sampling method, their difference is finite.
+
+$$
+H(X) = - \int_{\mathbb{R}} p_{X}(x) \log p_{X}(x) \mathrm{d}x
+$$
+
+Correspondingly, **joint entropy** and **conditional entropy** is:
+$$
+H(X Y) = - \iint_{\mathbb{R}} p_{XY }(x y) \log p_{X Y}(xy)\mathrm{d}x\mathrm{d}y
+$$
+and 
+$$
+H(X| Y) = - \iint_{\mathbb{R}} p_{X Y}(xy) \log p_{X|Y}(x|y)\mathrm{d}x\mathrm{d}y
+$$
+
+### Maximum Continuous Entropy Sources
+
+Reminder: For discrete sources, the entropy reaches at its maximum when the occurrence probabilities of all $n$ symbols are identical.
+
+However,
+- Since entropy is inherently infinite, there are no maximum entropies for continuous sources.
+- Thus, we consider maximum entropy under certain conditions.
+
+**Amplitude of the output of the source is limited**: Maximum reached when uniformly distributed: 
+$$
+\arg \max_{p_{X}(x)}H(X) = \begin{cases}
+\frac{1}{b-a} \quad &a\leq x \leq b \\
+0 \quad &\text{others}
+\end{cases}
+$$
+**Average power of the output of the source is limited**: Maximum reached when normally distributed:
+$$
+\arg \max_{p_{X}(x)}H(X) = \frac{1}{\sqrt{ 2 \pi \sigma^2 }} \exp\left( - \frac{(x-\mu)^2}{2 \sigma^2} \right)
+$$
+
+
+
+## Exercises
+
+[Homework 1 (GitHub)](homework/hw1_ans.pdf), [Homework 2 (Github)](homework/hw2_ans.pdf) and [Homework 4 (GitHub)](homework/hw4_ans.pdf)
