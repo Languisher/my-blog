@@ -1,7 +1,7 @@
 ---
 author: Nan Lin
 pubDatetime: 2025-01-02T08:00:00Z
-modDatetime: 2025-01-04T08:00:00.000Z
+modDatetime: 2025-01-04T18:00:00.000Z
 title: ICT 2-Channel and Channel Capacity
 slug: information-and-coding-theory-2
 featured: false
@@ -130,6 +130,3 @@ $$
 \forall i \in [\![1, n]\!], \; \sum_{j=1}^m p(y_{j}|x_{i})\log p(y_{j}|x_{i}) = \sum_{j=1}^m p(y_{j}|x_{i}) \beta_{j}
 $$
 (For each row, construct an equation: find the probability in each column and fill in the equation)
-## Exercises
-
-[Homework 4 (GitHub)](homework/hw4_ans.pdf)

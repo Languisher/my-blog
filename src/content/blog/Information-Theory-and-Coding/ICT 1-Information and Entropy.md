@@ -325,6 +325,3 @@ $$
 
 
 
-## Exercises
-
-[Homework 1 (GitHub)](homework/hw1_ans.pdf), [Homework 2 (Github)](homework/hw2_ans.pdf) and [Homework 4 (GitHub)](homework/hw4_ans.pdf)
