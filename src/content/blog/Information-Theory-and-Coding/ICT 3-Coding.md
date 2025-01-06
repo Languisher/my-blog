@@ -7,8 +7,8 @@ slug: information-and-coding-theory-3
 featured: false
 draft: false
 tags:
-  - Information-Theory-and-Coding
-description: Note of Course ICE4411P-Information Theory and Coding
+  - Information-and-Coding-Theory
+description: Note of Course ICE4411P-Information Theory and Coding (3/4)
 ---
 ## Table of contents
 
