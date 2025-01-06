@@ -1,7 +1,7 @@
 ---
 author: Nan Lin
-pubDatetime: 2025-01-03T08:00:00Z
-modDatetime: 2025-01-05T08:00:00.000Z
+pubDatetime: 2025-01-06T08:00:00Z
+modDatetime: 2025-01-06T08:00:00.000Z
 title: ICT 4-Channel Coding
 slug: information-and-coding-theory-4
 featured: false
