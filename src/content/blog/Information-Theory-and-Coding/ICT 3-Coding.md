@@ -1,14 +1,14 @@
 ---
 author: Nan Lin
 pubDatetime: 2025-01-03T23:00:00Z
-modDatetime: 2025-01-05T23:00:00.000Z
+modDatetime: 2025-01-07T10:00:00.000Z
 title: ICT 3-Coding
 slug: information-and-coding-theory-3
 featured: false
 draft: false
 tags:
-  - Information-Theory-and-Coding
-description: Note of Course ICE4411P-Information Theory and Coding
+  - Information-and-Coding-Theory
+description: "Course Notes: ICE4411P-Information Theory and Coding (3/4)"
 ---
 ## Table of contents
 

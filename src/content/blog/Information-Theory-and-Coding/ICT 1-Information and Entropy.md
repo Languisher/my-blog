@@ -1,14 +1,14 @@
 ---
 author: Nan Lin
 pubDatetime: 2025-01-01T23:00:00Z
-modDatetime: 2025-01-04T15:00:00.000Z
+modDatetime: 2025-01-07T08:00:00.000Z
 title: ICT 1-Information and Entropy
 slug: information-and-coding-theory-1
 featured: false
 draft: false
 tags:
-  - Information-Theory-and-Coding
-description: Note of Course ICE4411P-Information Theory and Coding
+  - Information-and-Coding-Theory
+description: "Course Notes: ICE4411P-Information Theory and Coding (1/4)"
 ---
 ## Table of contents
 

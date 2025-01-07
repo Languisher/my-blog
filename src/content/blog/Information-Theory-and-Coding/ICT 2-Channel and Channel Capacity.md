@@ -1,19 +1,19 @@
 ---
 author: Nan Lin
 pubDatetime: 2025-01-02T23:00:00Z
-modDatetime: 2025-01-04T23:00:00.000Z
+modDatetime: 2025-01-07T09:00:00.000Z
 title: ICT 2-Channel and Channel Capacity
 slug: information-and-coding-theory-2
 featured: false
 draft: false
 tags:
-  - Information-Theory-and-Coding
-description: Note of Course ICE4411P-Information Theory and Coding
+  - Information-and-Coding-Theory
+description: "Course Notes: ICE4411P-Information Theory and Coding (2/4)"
 ---
 ## Table of contents
 
 Message transmission Situation: Source $x_i$ ----Channel----> Destination $y_j$.
-We want to figure out what is the symbol or the symbol sequence the source sends.
+We want to figure out what the symbol or the symbol sequence the source sends is.
 
 From an overall perspective:
 - How much information could be transmitted from src to dst? (*Channel capacity*)
