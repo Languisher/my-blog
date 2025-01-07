@@ -8,7 +8,7 @@ featured: false
 draft: false
 tags:
   - Information-and-Coding-Theory
-description: "Course Notes: ICE4411P-Information Theory and Coding (2/4)"
+description: "Course Notes: ICE4411P-Information Theory and Coding (4/4)"
 ---
 ## Table of contents
 
