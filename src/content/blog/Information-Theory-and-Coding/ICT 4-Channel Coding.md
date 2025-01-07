@@ -1,15 +1,3 @@
----
-author: Nan Lin
-pubDatetime: 2025-01-06T08:00:00Z
-modDatetime: 2025-01-06T08:00:00.000Z
-title: ICT 4-Channel Coding
-slug: information-and-coding-theory-4
-featured: false
-draft: false
-tags:
-  - Information-and-Coding-Theory
-description: Note of Course ICE4411P-Information Theory and Coding (4/4)
----
 ## Table of contents
 
 **Channel coding** is the process of ensuring reliable data transmission over noisy communication channels. The key problem in this chapter is _to reduce the error rate as small as possible_.

@@ -1,14 +1,14 @@
 ---
 author: Nan Lin
-pubDatetime: 2025-01-01T08:00:00Z
-modDatetime: 2025-01-04T08:00:00.000Z
+pubDatetime: 2025-01-01T23:00:00Z
+modDatetime: 2025-01-04T15:00:00.000Z
 title: ICT 1-Information and Entropy
 slug: information-and-coding-theory-1
 featured: false
 draft: false
 tags:
-  - Information-and-Coding-Theory
-description: Note of Course ICE4411P-Information Theory and Coding (1/4)
+  - Information-Theory-and-Coding
+description: Note of Course ICE4411P-Information Theory and Coding
 ---
 ## Table of contents
 
@@ -74,7 +74,7 @@ p(x_{1}x_{1}\dots x_{1}\to x_{1}) & \dots & p(x_{1}x_{1}\dots x_{1}\to x_{n}) \\
 p(x_{n}x_{n}\dots x_{n}\to x_{1}) & \dots & p(x_{n}x_{n}\dots x_{n } \to x_{n})
 \end{bmatrix}$$ 
 
-> Note that the $p$ is a probability matrix with dimension $n^m \times n$.
+> Note that the $p$ is the probability matrix with dimension $n^m \times n$.
 
 ## Information of a Random Event: its Mathematic Model
 
@@ -90,11 +90,11 @@ Uncertainty is highest not just when probabilities are low but when they are ne
 
 Uncertainty also reflects the extent of surprise of the observer when the event happens.
 
-### Self-Information: Mathematic Modeling of Uncertainty
+### Self-Information of a Random Event: Mathematic Modeling of Uncertainty
 
 The process of obtaining information could be interpreted as:
-- Formally have little confidence in the occurrence of what symbol the source sends.
-- After observation, we know that the source has a higher probability of sending certain variables compared to others.
+- Formally, there is little confidence in the occurrence of the symbol the source sends.
+- After observation, we know that the source is more likely to send certain variables than others.
 
 **Self-information** about a specific event is a mathematical interpretation of "uncertainty." The self-information of a random event $X = x_i$ is:
 $$
@@ -106,22 +106,32 @@ Properties of self-information:
 - *Certainty*: If the event has probability 1, the event will certainly happen; thus, the self-information is 0 bit. 
 - *Extreme surprise*: If the event has a probability very close to 0, we feel exceedingly astonished if the event happens. Its self-information is infinity.
 
-### Self-Information of Various Types of Sources
+### Joint Self-Information and Condition Self-Information
+
+$(X= x|Y=y)$ and $(X = x, Y= y)$ are random events, the self-information of these events are defined as follows:
+
+**Joint self-information**: Information of the event that the symbols appear simultaneously: 
+$$
+I(x_{i}y_{j}) = -\log p(x_{i }y_{j})
+$$
+
+**Condition self-information**: Information of the event that the symbol appears under certain condition: 
+$$
+I(x_{i}|y_{j}) = - \log p(x_{i}|y_{j})
+$$
+
+
+### Self-Information in the Case of S-Independent Events
+
+When $X$ and $Y$ are s-independent, $$I(x_{i}y_{j}) = I(x_{i})+ I(y_{j})$$
+
+### Self-Information of a Sequence
 
 **Single source, multiple symbols**: Source sending a sequence of $N$ symbols, where each symbol appears $m_{i}$ times.
 $$
 I = - \sum_{x_i \in X} m_i \log p(x_i) \quad \text{where} \quad \sum_{x_i \in X} m_i = N
 $$
 
-**Multiple sources**:
-- **Joint self-information**: Information of the event that the symbols appear simultaneously: $I(x_{i}y_{j}) = -\log p(x_{i }y_{j})$
-- **Condition self-information**: Information of the event that the symbol appears under certain condition: $I(x_{i}|y_{j}) = - \log p(x_{i}|y_{j})$
-
-> Consider modeling each case as a random event.
-
-### Self-Information in the case of s-independent events
-
-When $X$ and $Y$ are s-independent, $$I(x_{i}y_{j}) = I(x_{i})+ I(y_{j})$$
 ## Mutual Information: Relation in Two Random Events
 
 ### Mutual Information: Acquire Information about one Random Event from Another Random Event
@@ -143,7 +153,10 @@ $$
 I(x_{i};y_{j}) = I(x_{i}) - I(x_{i}|y_{j}) =  \log \frac{p(x_{i}|y_{j})}{p(x_{i})} = \log \frac{p(x_{i}y_{j})}{p(x_{i})p(y_{j})}
 $$
 
-
+Therefore,
+$$
+I(x_{i};y_{j}) = I(x_{i})- I(x_{i}|y_{j}) = I(y_{j})- I(y_{j}|x_{i}) = I(x_{i})+ I(y_{j}) -  I(x_{i}y_{j})
+$$
 ## Information Entropy of Single-Symbol Discrete Memoryless Sources
 
 ### Information Entropy: The Average Amount of Information Contained in Each Symbol of a Sequence
@@ -158,10 +171,6 @@ $$
 \bar{I} = - \sum_{i=1}^n \frac{m_{i}}{N} \log p(x_{i}) \approx - \sum_{i=1}^n p(x_{i})\log p(x_{i})
 $$
 
-It is also the *expectation of the self-information*:
-$$
-\bar{I} = \mathbb{E}[I(X = x_{i})]
-$$
 
 **Information Entropy** of a discrete source (described as a random variable), denoted as $H(X)$, is:
 - The average amount of information per symbol of a sequence after the source sends the message.
@@ -194,10 +203,11 @@ $$
 1. *Non-negativity*.
 2. *Symmetry*. Only how the probabilities is distributed really matters to the entropy of the random variable. We don't care which event $x_{i}$ that the probability $p_{i}$ corresponds to.
 3. *Extensibility*. Symbols with very low probabilities have little contribution to the entropy of the source. (Hint: $\lim_{ \epsilon \to 0 } \epsilon \log \epsilon = 0$)
-4. *Additivity*. $H(X Y) = H(X) + H(Y | X)$ (Imagine $H$ as $\log p$), when $Y$ and $X$ are s-independent, $H(XY) = H(X) + H(Y)$.
+4. *Additivity*. $H(X Y) = H(X) + H(Y | X)$, when $Y$ and $X$ are s-independent, $H(XY) = H(X) + H(Y)$.
 5. *Increasing*. If divide one single symbol into several symbols, the overall entropy will increase.
 6. *Upper convexity*, shape like $\cap$.
 7. *Extremum property*: $$H(p_{1}, p_{2}, \dots, p_{n}) \leq H\left( \frac{1}{n}, \frac{1}{n}, \dots, \frac{1}{n} \right)$$
+> Imagine $H$ as $\log p$ when calculating $H(X Y)$.
 ### Maximum Discrete Entropy Theorem
 **Maximum discrete entropy theorem**: For a discrete memoryless source $X$ whose sample space contains $n$ symbols, the entropy arrives at its maximum when all of the occurrence of the symbols is identical, i.e.
 $$
@@ -265,10 +275,27 @@ $$
 When the source is memoryless, clearly $H_{N}(X) = H(X)$.
 
 The average symbol entropy has the following properties:
-- *Decreases as $N$ increases*: Any new term is smaller than all of its former terms, thus the average is monotone decreasing. I.e. $$H(X_{N}| X_{1}\dots X_{N-1}) \leq H(X_{N-1}| X_{1}\dots X_{N-2})\leq \dots \leq H(X_{2}|X_{1}) \leq H(X_{1})= H(X)$$
+- *Decreases as $N$ increases*: Any new term is smaller than all of its former terms, thus the average is monotone decreasing. i.e. (Note: $H_{0}(X)$ is the entropy of a _single-symbol equal-probability distributed memoryless source_, deduced from the maximum discrete entropy theorem) $$H(X_{N}| X_{1}\dots X_{N-1}) \leq H(X_{N-1}| X_{1}\dots X_{N-2})\leq \dots \leq H(X_{2}|X_{1}) \leq H(X_{1})= H(X) \leq H_{0}(X)$$
 - $N_{1} > N_{2}$, $H_{N_{1}}(X) < H_{N_{2}}(X)$
-- *Existence of limit when the sequence is infinitely long*: $H_{\infty}(X) = H_{N\to \infty} (X^N)$
+- *Existence of limit when the sequence is infinitely long*.
 
+The first property implies that _more memory generally leads to lower average entropy per symbol._
+
+The existence is defined as:
+
+$$
+H_{\infty}(X) = H_{N\to \infty} (X^N ) =H(X_{N}|X ^{N-1})
+$$
+
+Example: Calculate $H_{\infty}$ of a stationary first-order source:
+$$
+\begin{align}
+H_{\infty}(X) = H(X_{N}|X^{N-1}) &= \sum_{X_{1}}\dots \sum_{X_{N}} p(x_{1}\dots x_{N}) \log p (x_{N}| x_{1}\dots x_{N-1})  \\
+&= \sum _{X_{1}} \dots \sum_{X_{N}} p(x_N|x_{1}\dots x_{N-1}) p(x_{1}\dots x_{N-1}) \log p(x_{N}| x_{1}\dots x_{N-1})  \\
+&= \sum_{X_{N}} \sum_{X_{N-1}} p(x_{N}|x_{N-1}) p(x_{N-1}) \log p(x_{N}|x_{N-1}) \sum_{X_{1}}\dots \sum_{X_{N-1}} p(x_{1}\dots x_{N-2}) \\
+&=  \sum_{X_{N-1}} p(x_{N-1}) \sum_{X_{N}}p(x_{N}|x_{N-1})  \log p(x_{N}|x_{N-1})
+\end{align}
+$$
 ### Transmission Efficiency and Source Redundancy
 
 **Transmission Efficiency** is 
@@ -292,6 +319,23 @@ Properties:
 
 $$
 H(X) = - \int_{\mathbb{R}} p_{X}(x) \log p_{X}(x) \mathrm{d}x
+$$
+
+Example: A continuous source modeled by a normally distributed random variable: $X \sim N (\mu, \sigma^2)$ where 
+$$
+p_{X}(x) = \frac{1}{\sqrt{ 2 \pi \sigma^2 }} \exp\left( - \frac{(x- \mu)^2}{2 \sigma^2} \right)\text{ d}x
+$$
+Its entropy could be calculated as using integration by parts:
+
+$$
+\begin{align}
+H(X) &= - \int _{- \infty}^{\infty} p_{X}(x) \log \left( \frac{1}{\sqrt{ 2 \pi \sigma^2 }} \exp\left( -\frac{(x-\mu)^2}{2 \sigma^2} \right) \right) \text{ d}x  \\
+&= - \int _{- \infty}^{\infty} p_{X}(x) (- \log \sqrt{ 2 \pi \sigma^2 })\text{ d}x + \int _{-\infty}^{\infty} \log e \left(  \frac{(x-\mu)^2}{2\sigma^2} \right) p_{X}(x)\text{ d}x \\
+&= \log \sqrt{ 2 \pi \sigma^2 } + \frac{\log e}{\sqrt{ 2 \pi \sigma^2 }}\int_{-\infty}^{\infty}  \left( \frac{(x-\mu)^2}{2 \sigma^2} \right) \exp\left( - \frac{(x-\mu)^2}{2 \sigma^2} \right)\text{ d}x  \\
+&=^{y = \frac{(x- \mu)^2}{ \sqrt{ 2 } \sigma}} \log \sqrt{ 2 \pi \sigma^2 } + \frac{\log e}{\sqrt{ \pi }} \int_{- \infty}^{\infty} e^{-y^2} y^2\text{ d}y \\
+&=^{u =  e^{-y^2}, \; v=- y/2}\log \sqrt{ 2 \pi \sigma^2 }  + \frac{\log e}{\sqrt{ \pi }} \left( \left[ - \frac{e^{-y^2}}{2} y \right]_{- \infty}^{\infty} -\int _{-\infty}^{\infty} \left( - \frac{e^{-y^2}}{2} \text{} \right) \text{ d}y \right) \\
+&= \log \sqrt{ 2 \pi \sigma^2 } + \frac{\log e}{\sqrt{ \pi }} \frac{1}{2} \int_{- \infty}^\infty e^{-y^2}\text{ d}y = \frac{1}{2}\log 2 \pi e \sigma^2
+\end{align}
 $$
 
 Correspondingly, **joint entropy** and **conditional entropy** is:

@@ -1,14 +1,14 @@
 ---
 author: Nan Lin
-pubDatetime: 2025-01-03T08:00:00Z
-modDatetime: 2025-01-05T08:00:00.000Z
+pubDatetime: 2025-01-03T23:00:00Z
+modDatetime: 2025-01-05T23:00:00.000Z
 title: ICT 3-Coding
 slug: information-and-coding-theory-3
 featured: false
 draft: false
 tags:
-  - Information-and-Coding-Theory
-description: Note of Course ICE4411P-Information Theory and Coding (3/4)
+  - Information-Theory-and-Coding
+description: Note of Course ICE4411P-Information Theory and Coding
 ---
 ## Table of contents
 
@@ -68,7 +68,7 @@ Based on the above definitions, the following conclusions can be drawn:
 
 **Fixed-Length Code Judgement**: For fixed-length codes, as long as they are non-singular, they are guaranteed to be uniquely decodable. The following steps describe how to evaluate variable-length codes.
 
-**Necessary and Sufficient Condition for Uniquely Decodable Codes: Kraft's Inequality**: For any uniquely decodable code set $C = \{ W_1, W_2, \dots, W_q \}$, with code symbols $\{ b_1, b_2, \dots, b_m \}$, and corresponding code lengths $k_1, k_2, \dots, k_q$, the **Kraft's inequality** must hold:
+**Necessary Condition for Uniquely Decodable Codes: Kraft's Inequality**: For any uniquely decodable code set $C = \{ W_1, W_2, \dots, W_q \}$, with code symbols $\{ b_1, b_2, \dots, b_m \}$, and corresponding code lengths $k_1, k_2, \dots, k_q$, the **Kraft's inequality** must hold:
 
 $$
 \sum_{i=1}^q m^{-k_i} \leq 1
@@ -152,10 +152,10 @@ $$
 ![](attachments/Lossless%20Encoding/Transmission%20Efficiency.png)
 > Note: To calculate the efficiency, we need to compare the entropy with the maximum transmitted information rate, achieved when sending equal-distributed encoded sequence.
 
-**Capacity of the channel (maximum information rate) necessary to transmit a single source symbol**: Evaluate the maximum transmitted information  _by the encoded symbol/sequence_  of each *source* symbol
+**Capacity of the channel (maximum information rate) necessary to transmit a single source symbol**: Evaluate the maximum transmitted information  _by the encoded codeword_  of each *source* symbol
 - We want to evaluate the maximum transmission capacity of the channel
 - In this case, the probability distribution of the _code symbol_ should be equivalent (_Maximum discrete theorem_)
-- Under this condition, observing the useful information actually transmitted per _source_ symbol can evaluate its efficiency.
+- Under this condition, observing the useful information transmitted per _source_ symbol can evaluate its efficiency.
 
 > Note: Max CODE Information per SOURCE symbol.
 
@@ -182,11 +182,17 @@ $$
 The transmission of symbols or sequences goes through these steps: Source -> Encode -> Channel -> Decode -> Destination.
 
 The necessary conditions in this process:
-(1) Information of each code should be larger than the average entropy per symbol.
+(1) The maximum information rate of _sending a source symbol_ should be larger than the average entropy per symbol.
 (2) The decoding error probability should be very low.
 (3) Enhance coding efficiency.
 
-Therefore, our optimization goal is to:
+From (1), for any $\epsilon> 0$ and $\delta >0$, if 
+$$
+\frac{\overline{L_{N}}}{N} \log m \geq H_{N}(X) + \epsilon
+$$
+Then exists a sufficient large $N$ that satisfies the condition that the decoding error rate is smaller than $\delta$.
+
+Our optimization goal is to:
 $$
 \arg \min_{\bar{L}} p\left( |\frac{\overline{L_{N}}}{N} \log r - H_{N}(X) | \geq \epsilon \right) \quad \text{s.t.} \quad  R_{\max}  = \frac{\overline{L_{N}}}{N} \log r\geq H_{N}(X)
 $$
@@ -203,7 +209,7 @@ $$
 
 According to Chebyshev's theorem, if we want the error probability to be below $\delta>0$ (which should be a very small value) and the coding efficiency to be high than a certain value (which we could then deduce the value of $\epsilon$), the length of the source sequence should satisfy:
 $$
-N \geq \frac{\sigma^2(X)}{\epsilon^2\delta} \quad \text{where} \quad \sigma^2(X) = \mathbb{E}[(I(x_{i}) - H(X))^2], \; \epsilon= \frac{H_{N}(X) (1- \eta)}{\eta}
+N \geq \frac{\sigma^2(X)}{\epsilon^2\delta} \quad \text{where} \quad \sigma^2(X) = \mathbb{E}_{X}[(I(x_{i}) - H(X))^2], \; \epsilon= \frac{H_{N}(X) (1- \eta)}{\eta}
 $$
 
 Conclusion: 
@@ -277,7 +283,7 @@ $$
 
 The **average distortion** (i.e. expectation or statistical average) of the distortion function is:
 $$
-\overline{D} = \mathbb{E} [d(x_{i},y_{j})] = \sum_{i}\sum_{j} p(x_{i}y_{j}) d(x_{i},y_{j})
+\overline{D} = \mathbb{E}_{X, Y}[d(x_{i},y_{j})] = \sum_{i}\sum_{j} p(x_{i}y_{j}) d(x_{i},y_{j})
 $$
 
 Suppose that the length of the sequence is $N$. Therefore, for any $(i, j)$, the distortion function is the sum of the distortion of each symbol in the sequence:
@@ -294,34 +300,45 @@ and the **average distortion per symbol** is:
 $$
 \overline{D} = \frac{\overline{D_{N}}}{N}
 $$
-### Information Rate-distortion Function and Solution
+### Information Rate-Distortion Function 
 
 We restate our goal here:
 $$
 \min I(X;Y) \quad \text{s.t.} \quad \overline{D} \leq  D
 $$
 
-Define $R(D)$ the **information rate-distortion function** which is the rate should be sent by the source under the fidelity criterion. 
+Imagine the encoder as a channel transform $X$ into $Y$, thus we're finding the probability transition matrix that minimize the amount of information transmitted (i.e. the mutual information):
 
-The amount of information transmitted monotone decrease with the degree of the distortion.
+$$
+p(y_{j}|x_{i}) =\arg\min_{P} I(X;Y) \quad \text{s.t.} \quad \overline{D} \leq  D
+$$
+
+We define $R(D)$ the **information rate-distortion function** which is the minimum rate should be sent by the source under the fidelity criterion. 
+
+$$
+R(D) = \min_{p\in P_{D}} I(X; Y) \quad \text{where} \quad P_{D} = \{p(y_{j}|x_{i}), \; \overline{D} \leq D\}
+$$
+
+$R(D)$ monotone decreases with the degree of the distortion (allowed) and falls to zero when $D$ reaches a value:
 
 ![Minimal-Information-Rate-Figure](attachments/Minimal-Information-Rate-Figure.png)
 
-Imagine the encoder as a channel transform $X$ into $Y$, thus we're finding the probability transition matrix that minimize the mutual information:
+### Calculate the Maximum Distortion Rate
+We denote
 $$
-R(D) = \min_{p_{{ij}}\in P_{D}} I(X; Y) \quad \text{where} \quad P_{D} = \{p(y_{j}|x_{i}), \; \overline{D} \leq D\}
+D_{\max} = \max_{R(D) \ne 0} D  = \min_{R(D) = 0 } D
 $$
 
-According to the graph, we need to find $D_{\max}$. Since $X$ and $Y$ are s-independent,
+According to the graph, we need to find $D_{\max}$. Since $X$ and $Y$ are s-independent when $R(D) = 0$,  $I(x_{i}; y_{j}) = 0$, therefore $D_{\max}$ is reached under certain probability distribution of $p(y)$:
 $$
-D_{\max} = \min_{p(y)} \sum_{i=1}^n \sum_{j=1}^m p(x_{i})p(y_{j}) d(x_{i}, y_{j}) = \min_{p(y)} \sum_{j=1}^m p(y_{j})\sum_{i=1}^M p(x_{i})d(x_{i},y_{j})
+D_{\max} = \min_{p(y)} D = \min_{p(y)} \sum_{i=1}^n \sum_{j=1}^m p(x_{i})p(y_{j}) d(x_{i}, y_{j}) = \min_{p(y)} \sum_{j=1}^m p(y_{j})\sum_{i=1}^M p(x_{i})d(x_{i},y_{j})
 $$
 
 By solving the equation:
 $$
-y_{k} = \arg\min_{y_{j}}  \sum_{i=1}^M p(x_{i})d(x_{i},y_{j})
+\quad y_{k} = \arg\min_{y_{j}}  \sum_{i=1}^M p(x_{i})d(x_{i},y_{j})
 $$
-The minimum of $D_{\max}$ could be achieved by setting the probability distribution as: 
+The minimum of $D_{\max}$ could be achieved when the probability distribution of $y$ is: 
 
 $$
 p(y_{j}) = \delta_{j,k} = \begin{cases}
@@ -338,7 +355,7 @@ The question is, when is it (im)-possible, under fidelity criterion $D$ to code 
 
 The answer is that: for _any_ $D \geq 0$ and $\epsilon>0$, when the transmission rate 
 $$
-R > R(D)
+R > R(D) = \min I(X; Y)
 $$
 where $R(D)$ is the information rate-distortion function, there exists a method to make the distortion rate less then $D$.
 

@@ -1,14 +1,14 @@
 ---
 author: Nan Lin
-pubDatetime: 2025-01-02T08:00:00Z
-modDatetime: 2025-01-04T18:00:00.000Z
+pubDatetime: 2025-01-02T23:00:00Z
+modDatetime: 2025-01-04T23:00:00.000Z
 title: ICT 2-Channel and Channel Capacity
 slug: information-and-coding-theory-2
 featured: false
 draft: false
 tags:
-  - Information-and-Coding-Theory
-description: Note of Course ICE4411P-Information Theory and Coding (2/4)
+  - Information-Theory-and-Coding
+description: Note of Course ICE4411P-Information Theory and Coding
 ---
 ## Table of contents
 
@@ -23,6 +23,8 @@ From an overall perspective:
 ## Mutual Information and Average Mutual Information
 
 ### Definition of the Mutual Information
+
+> Revision.
 
 **Mutual information**: Information obtained (or "delivered") through the transmission of the symbol.
 - Source sent $X = x_i$, Destination received $Y = y_j$.
@@ -73,14 +75,11 @@ $$
 I(X;Y) = \mathbb{E}_{X, Y}[I(x_{i};y_{j})] = \sum_{x_{i}} \sum_{y_{j}} p(x_{i}y_{j}) I(x_{i};y_{j}) = \sum_{x_{i}}\sum_{y_{j}} p(x_{i}y_{j}) \log \frac{p(x_{i}|y_{j})}{p(x_{i})}
 $$
 
-> Other formulas are similar.
-
-
 ### Conclusion
 
 Identify: Mutual information, noise entropy and loss entropy during the transmission process.
 ![](attachments/Relationship%20Between%20Different%20Kinds%20of%20Entropies.png)
-## Channel
+## Discrete Channel
 
 ### Mathematical Model of a Discrete Channel
 
@@ -117,6 +116,7 @@ How to calculate the channel's capacity?
 - The maximum of the mutual information usually is reached when the symbols are equally distributed according to the maximum discrete entropy theorem.
 
 Method 1: Calculate the derivative of $I(X;Y)$ to the unknown variable defining the probability distribution of $X$. (e.g. binary channel $p$ and $1-p$)
+
 Method 2: For a lossless channel, the maximum is reached when the symbols of the source is equally distributed and $C= \max_{p(x)} H(X)$. For a noiseless channel, the maximum is reached when the symbols of the _destination_ is equally distributed and $C = \max_{p(x)} H(Y)$.
 Method 3: Formula for special symmetric channels.
 - Symmetric: 
@@ -125,8 +125,37 @@ Method 3: Formula for special symmetric channels.
 - Quasi symmetric:
 	- Conditions: After reorganization, could be divided into multiple subsets (in total $K$ subsets) which each of the subset is symmetric. Denote in each subset, the sum of each _row_ is $N_k$ and the sum of each _column_ is $M_k$.
 	- Capacity: $$C= \log n - H(p_{i_{1}},\dots,p_{i_{m}})- \sum_{k=1}^K N_{k}\log M_k$$
+> Notice the difference: for symmetric channel, use $\log m$ and for quasi-symmetric channel, use $\log n$.
+ 
 Method 4: Lagrangian method for the general situations. We have $m$ unknowns denoted as $\beta_{1}, \dots, \beta_{m}$. *NSC of maximum mutual information is:*
 $$
 \forall i \in [\![1, n]\!], \; \sum_{j=1}^m p(y_{j}|x_{i})\log p(y_{j}|x_{i}) = \sum_{j=1}^m p(y_{j}|x_{i}) \beta_{j}
 $$
 (For each row, construct an equation: find the probability in each column and fill in the equation)
+
+The channel capacity is:
+$$
+C = \log \sum_{j=1}^m 2^{\beta_{j}}
+$$
+and is reached when 
+$$
+\forall j, \quad p(y_{j}) = 2^{\beta_{j}- C}
+$$
+
+We therefore deduce the probability distribution of the symbols of the sources $p(x_{i})$ by solving the equation group:
+$$
+\forall j, \quad p(y_{j} ) = \sum_{i=1}^m p(y_{j}|x_{i}) p(x_{i})
+$$
+
+## Continuous Channel
+
+In a channel disturbed by Gaussian white noise, the maximum information transmission rate 𝐶 is
+$$
+C = W \log_{2}\left( 1 + \frac{S}{N} \right) \; \text{bits/second}
+$$
+where
+- $W$ is the bandwidth of the channel
+- $N$ is the power of the noise in the channel 
+- $S$ is the average power of the signal transmitted through the channel
+
+> Note: The SNR ratio is defined as $\text{SNR} = 10 \log_{10} \frac{S}{N}$ in dB.
