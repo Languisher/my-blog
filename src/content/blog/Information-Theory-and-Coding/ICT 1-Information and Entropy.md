@@ -289,12 +289,12 @@ $$
 
 Example: Calculate $H_{\infty}$ of a stationary first-order source:
 $$
-\begin{align}
+\begin{align*}
 H_{\infty}(X) = H(X_{N}|X^{N-1}) &= \sum_{X_{1}}\dots \sum_{X_{N}} p(x_{1}\dots x_{N}) \log p (x_{N}| x_{1}\dots x_{N-1})  \\
 &= \sum _{X_{1}} \dots \sum_{X_{N}} p(x_N|x_{1}\dots x_{N-1}) p(x_{1}\dots x_{N-1}) \log p(x_{N}| x_{1}\dots x_{N-1})  \\
 &= \sum_{X_{N}} \sum_{X_{N-1}} p(x_{N}|x_{N-1}) p(x_{N-1}) \log p(x_{N}|x_{N-1}) \sum_{X_{1}}\dots \sum_{X_{N-1}} p(x_{1}\dots x_{N-2}) \\
 &=  \sum_{X_{N-1}} p(x_{N-1}) \sum_{X_{N}}p(x_{N}|x_{N-1})  \log p(x_{N}|x_{N-1})
-\end{align}
+\end{align*}
 $$
 ### Transmission Efficiency and Source Redundancy
 
@@ -328,14 +328,14 @@ $$
 Its entropy could be calculated as using integration by parts:
 
 $$
-\begin{align}
+\begin{align*}
 H(X) &= - \int _{- \infty}^{\infty} p_{X}(x) \log \left( \frac{1}{\sqrt{ 2 \pi \sigma^2 }} \exp\left( -\frac{(x-\mu)^2}{2 \sigma^2} \right) \right) \text{ d}x  \\
 &= - \int _{- \infty}^{\infty} p_{X}(x) (- \log \sqrt{ 2 \pi \sigma^2 })\text{ d}x + \int _{-\infty}^{\infty} \log e \left(  \frac{(x-\mu)^2}{2\sigma^2} \right) p_{X}(x)\text{ d}x \\
 &= \log \sqrt{ 2 \pi \sigma^2 } + \frac{\log e}{\sqrt{ 2 \pi \sigma^2 }}\int_{-\infty}^{\infty}  \left( \frac{(x-\mu)^2}{2 \sigma^2} \right) \exp\left( - \frac{(x-\mu)^2}{2 \sigma^2} \right)\text{ d}x  \\
-&=^{y = \frac{(x- \mu)^2}{ \sqrt{ 2 } \sigma}} \log \sqrt{ 2 \pi \sigma^2 } + \frac{\log e}{\sqrt{ \pi }} \int_{- \infty}^{\infty} e^{-y^2} y^2\text{ d}y \\
+&=^{y = \frac{x- \mu}{ \sqrt{ 2 } \sigma}} \log \sqrt{ 2 \pi \sigma^2 } + \frac{\log e}{\sqrt{ \pi }} \int_{- \infty}^{\infty} e^{-y^2} y^2\text{ d}y \\
 &=^{u =  e^{-y^2}, \; v=- y/2}\log \sqrt{ 2 \pi \sigma^2 }  + \frac{\log e}{\sqrt{ \pi }} \left( \left[ - \frac{e^{-y^2}}{2} y \right]_{- \infty}^{\infty} -\int _{-\infty}^{\infty} \left( - \frac{e^{-y^2}}{2} \text{} \right) \text{ d}y \right) \\
 &= \log \sqrt{ 2 \pi \sigma^2 } + \frac{\log e}{\sqrt{ \pi }} \frac{1}{2} \int_{- \infty}^\infty e^{-y^2}\text{ d}y = \frac{1}{2}\log 2 \pi e \sigma^2
-\end{align}
+\end{align*}
 $$
 
 Correspondingly, **joint entropy** and **conditional entropy** is:
