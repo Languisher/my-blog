@@ -103,7 +103,7 @@ P_{r} = \frac{L_{B} - L_{D}}{L_{B}} \times 100 \%
 $$
 where $L_B$ is the length of the original source sequence, and $L_D$ is the length of the encoded sequence.
 ### Evaluation Metric: Average Code Length
-![](attachments/Lossless%20Encoding/Average%20Coding%20Length.png)
+
 **Average code length**: Evaluate the average encoded symbol length per source symbol.
 - Lossless encoding, each $x_i$ corresponds $c_i$ with same distribution probability.
 - Thus, the code length is the mathematical expectation of the new code length.
