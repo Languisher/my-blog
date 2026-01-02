@@ -717,6 +717,52 @@ textarea {
   font-display: var(--font-display, swap);
 }
 
+/* ============================================================================
+   HEADING NUMBERING (prose headings)
+   ============================================================================ */
+
+/* Reset counter at the start of an article/prose block */
+.prose {
+  counter-reset: h2;
+}
+
+/* Each H2 starts a new H3 section */
+.prose h2 {
+  counter-reset: h3;
+}
+
+/* Each H3 starts a new H4 section */
+.prose h3 {
+  counter-reset: h4;
+}
+
+/* H2 numbering: "1. " */
+.prose h2::before {
+  counter-increment: h2;
+  content: counter(h2) ". ";
+  margin-right: 0.4em;
+  opacity: 0.6;
+  font-variant-numeric: tabular-nums;
+}
+
+/* H3 numbering: "1.1 " */
+.prose h3::before {
+  counter-increment: h3;
+  content: counter(h2) "." counter(h3) " ";
+  margin-right: 0.4em;
+  opacity: 0.6;
+  font-variant-numeric: tabular-nums;
+}
+
+/* H4 numbering: "1.1.1 " */
+.prose h4::before {
+  counter-increment: h4;
+  content: counter(h2) "." counter(h3) "." counter(h4) " ";
+  margin-right: 0.4em;
+  opacity: 0.6;
+  font-variant-numeric: tabular-nums;
+}
+
 .prose h1 { @apply text-xl mt-8 mb-6; }
 .prose h2 { @apply text-lg mt-8 mb-4; }
 .prose h3 { @apply text-base mt-6 mb-3; }
