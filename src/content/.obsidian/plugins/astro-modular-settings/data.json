@@ -1,9 +1,9 @@
 {
   "runWizardOnStartup": true,
   "currentTemplate": "standard",
-  "currentTheme": "oxygen",
+  "currentTheme": "macos",
   "customThemeFile": "custom",
-  "contentOrganization": "file-based",
+  "contentOrganization": "folder-based",
   "themeColors": {
     "mode": "simple",
     "simpleColors": {
@@ -12,10 +12,10 @@
     }
   },
   "siteInfo": {
-    "site": "https://astro-modular.netlify.app",
-    "title": "Astro Modular",
-    "description": "A flexible blog theme designed for Obsidian users.",
-    "author": "David V. Kimball",
+    "site": "https://www.languisher.top",
+    "title": "LN's Blog",
+    "description": "Depuis 2026",
+    "author": "Nan Lin",
     "language": "en",
     "faviconThemeAdaptive": true,
     "defaultOgImageAlt": "Astro Modular logo."
@@ -64,18 +64,13 @@
       },
       {
         "title": "GitHub",
-        "url": "https://github.com/davidvkimball/astro-modular"
+        "url": "https://github.com/languisher"
       }
     ],
     "social": [
       {
-        "title": "X",
-        "url": "https://x.com/davidvkimball",
-        "icon": "x-twitter"
-      },
-      {
         "title": "GitHub",
-        "url": "https://github.com/davidvkimball",
+        "url": "https://github.com/languisher",
         "icon": "github"
       }
     ]
@@ -144,20 +139,20 @@
     "postCardAspectRatio": "og",
     "customPostCardAspectRatio": "2.5/1",
     "comments": {
-      "enabled": false,
+      "enabled": true,
       "provider": "giscus",
-      "rawScript": "",
-      "repo": "",
-      "repoId": "",
-      "category": "",
-      "categoryId": "",
-      "mapping": "",
-      "strict": "",
-      "reactions": "",
-      "metadata": "",
-      "inputPosition": "",
-      "theme": "",
-      "lang": "",
+      "rawScript": "<script src=\"https://giscus.app/client.js\"\n        data-repo=\"languisher/my-blog\"\n        data-repo-id=\"R_kgDOQyfmaw\"\n        data-category=\"Q&A\"\n        data-category-id=\"DIC_kwDOQyfma84C0fYT\"\n        data-mapping=\"pathname\"\n        data-strict=\"0\"\n        data-reactions-enabled=\"1\"\n        data-emit-metadata=\"0\"\n        data-input-position=\"bottom\"\n        data-theme=\"preferred_color_scheme\"\n        data-lang=\"en\"\n        crossorigin=\"anonymous\"\n        async>\n</script>",
+      "repo": "languisher/my-blog",
+      "repoId": "R_kgDOQyfmaw",
+      "category": "Q&A",
+      "categoryId": "DIC_kwDOQyfma84C0fYT",
+      "mapping": "pathname",
+      "strict": "0",
+      "reactions": "1",
+      "metadata": "0",
+      "inputPosition": "bottom",
+      "theme": "preferred_color_scheme",
+      "lang": "en",
       "loading": ""
     }
   },
@@ -172,7 +167,7 @@
     "scrollToTop": true,
     "showSocialIconsInFooter": true,
     "profilePicture": false,
-    "comments": false,
+    "comments": true,
     "featureButton": "mode",
     "showPostCardCoverImages": "featured-and-posts",
     "postCardAspectRatio": "og",
@@ -208,20 +203,20 @@
       "style": "circle"
     },
     "comments": {
-      "enabled": false,
+      "enabled": true,
       "provider": "giscus",
-      "rawScript": "",
-      "repo": "",
-      "repoId": "",
-      "category": "",
-      "categoryId": "",
-      "mapping": "",
-      "strict": "",
-      "reactions": "",
-      "metadata": "",
-      "inputPosition": "",
-      "theme": "",
-      "lang": "",
+      "rawScript": "<script src=\"https://giscus.app/client.js\"\n        data-repo=\"languisher/my-blog\"\n        data-repo-id=\"R_kgDOQyfmaw\"\n        data-category=\"Q&A\"\n        data-category-id=\"DIC_kwDOQyfma84C0fYT\"\n        data-mapping=\"pathname\"\n        data-strict=\"0\"\n        data-reactions-enabled=\"1\"\n        data-emit-metadata=\"0\"\n        data-input-position=\"bottom\"\n        data-theme=\"preferred_color_scheme\"\n        data-lang=\"en\"\n        crossorigin=\"anonymous\"\n        async>\n</script>",
+      "repo": "languisher/my-blog",
+      "repoId": "R_kgDOQyfmaw",
+      "category": "Q&A",
+      "categoryId": "DIC_kwDOQyfma84C0fYT",
+      "mapping": "pathname",
+      "strict": "0",
+      "reactions": "1",
+      "metadata": "0",
+      "inputPosition": "bottom",
+      "theme": "preferred_color_scheme",
+      "lang": "en",
       "loading": ""
     }
   },
