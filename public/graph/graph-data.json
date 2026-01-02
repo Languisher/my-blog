@@ -1,18 +1,25 @@
 {
   "nodes": [
     {
-      "id": "llm-parallelism-1-dp-pp-tpsp-introduction",
+      "id": "llm-parallelism-dp-pp-and-tp-sp",
       "type": "post",
       "title": "LLM Parallelism: DP, PP and TP/SP",
-      "slug": "llm-parallelism-1-dp-pp-tpsp-introduction",
+      "slug": "llm-parallelism-dp-pp-and-tp-sp",
+      "connections": 0
+    },
+    {
+      "id": "llm-parallelism-nccl-implementation",
+      "type": "post",
+      "title": "LLM Parallelism: NCCL Implementation",
+      "slug": "llm-parallelism-nccl-implementation",
       "connections": 0
     }
   ],
   "connections": [],
   "metadata": {
-    "totalPosts": 1,
+    "totalPosts": 2,
     "totalConnections": 0,
     "maxNodesApplied": false,
-    "originalNodeCount": 1
+    "originalNodeCount": 2
   }
 }

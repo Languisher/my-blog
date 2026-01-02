@@ -197,7 +197,7 @@ export const siteConfig: SiteConfig = {
 
   // Global Settings
   // [CONFIG:THEME]
-  theme: "dracula", // Available themes: "minimal" | "oxygen" | "atom" | "ayu" | "catppuccin" | "charcoal" | "dracula" | "everforest" | "flexoki" | "gruvbox" | "macos" | "nord" | "obsidian" | "rose-pine" | "sky" | "solarized" | "things" | "custom"
+  theme: "macos", // Available themes: "minimal" | "oxygen" | "atom" | "ayu" | "catppuccin" | "charcoal" | "dracula" | "everforest" | "flexoki" | "gruvbox" | "macos" | "nord" | "obsidian" | "rose-pine" | "sky" | "solarized" | "things" | "custom"
   // [CONFIG:CUSTOM_THEME_FILE]
   customThemeFile: "custom", // Only used if theme is set to "custom" above. Filename in src/themes/custom/ (without .ts extension)
   // [CONFIG:AVAILABLE_THEMES]
@@ -218,7 +218,7 @@ export const siteConfig: SiteConfig = {
   },
   layout: {
     // [CONFIG:LAYOUT_CONTENT_WIDTH]
-    contentWidth: "60rem",
+    contentWidth: "45rem",
   },
   tableOfContents: {
     // [CONFIG:TABLE_OF_CONTENTS_ENABLED]
@@ -434,7 +434,7 @@ export const siteConfig: SiteConfig = {
       // [CONFIG:POST_OPTIONS_COMMENTS_LANG]
       lang: "en",
       // [CONFIG:POST_OPTIONS_COMMENTS_LOADING]
-      loading: "",
+      loading: "lazy",
     },
   },
 };

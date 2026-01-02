@@ -41,6 +41,7 @@ export default defineConfig({
   '/contact-me': '/contact',
   '/contact-us': '/contact',
   '/privacy': '/privacy-policy',
+  '/posts/llm-parallelism-1-dp-pp-tpsp-introduction': '/posts/llm-parallelism-dp-pp-and-tp-sp',
   '/projects/obsidian-astro-composer': '/projects/astro-composer',
   '/projects/obsidian-astro-suite': '/projects/vault-cms',
   '/docs/api-reference': '/docs/api',

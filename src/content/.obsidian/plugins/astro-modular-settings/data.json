@@ -153,7 +153,7 @@
       "inputPosition": "bottom",
       "theme": "preferred_color_scheme",
       "lang": "en",
-      "loading": ""
+      "loading": "lazy"
     }
   },
   "features": {
@@ -217,7 +217,7 @@
       "inputPosition": "bottom",
       "theme": "preferred_color_scheme",
       "lang": "en",
-      "loading": ""
+      "loading": "lazy"
     }
   },
   "deployment": {

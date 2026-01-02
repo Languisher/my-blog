@@ -176,6 +176,12 @@
   force = true
 
 [[redirects]]
+  from = "/posts/llm-parallelism-1-dp-pp-tpsp-introduction"
+  to = "/posts/llm-parallelism-dp-pp-and-tp-sp"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/projects/obsidian-astro-composer"
   to = "/projects/astro-composer"
   status = 301

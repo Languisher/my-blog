@@ -2,14 +2,18 @@
 title: "LLM Parallelism: DP, PP and TP/SP"
 date: 2026-01-01
 description: ""
-tags: []
+tags:
+  - llm
+  - parallel
 image: ""
 imageAlt: ""
 imageOG: false
 hideCoverImage: false
 hideTOC: false
 targetKeyword: ""
-draft: true
+draft: false
+aliases:
+  - llm-parallelism-1-dp-pp-tpsp-introduction
 ---
 Motivation
 
