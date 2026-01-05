@@ -57,6 +57,13 @@
       "connections": 0
     },
     {
+      "id": "database-1-er-model",
+      "type": "post",
+      "title": "Database (1): ER Model, Relation Model",
+      "slug": "database-1-er-model",
+      "connections": 0
+    },
+    {
       "id": "llm-parallelism-dp-pp-and-tp-sp",
       "type": "post",
       "title": "LLM Parallelism: DP, PP and TP/SP",
@@ -80,9 +87,9 @@
   ],
   "connections": [],
   "metadata": {
-    "totalPosts": 11,
+    "totalPosts": 12,
     "totalConnections": 0,
     "maxNodesApplied": false,
-    "originalNodeCount": 11
+    "originalNodeCount": 12
   }
 }
