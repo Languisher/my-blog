@@ -1,7 +1,7 @@
 ---
 title: "C++: RAII, Smart Pointers"
-date: 2026-01-05
-description: ""
+date: 2026-01-11
+description: Stanford CS106L Notes — Spring 2025
 tags:
   - cpp
 image: ""

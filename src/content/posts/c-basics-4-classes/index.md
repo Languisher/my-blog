@@ -1,7 +1,7 @@
 ---
 title: "C++ Basics (4): Classes"
-date: 2026-01-04
-description: ""
+date: 2026-01-07
+description: Stanford CS106L Notes — Spring 2025
 tags:
   - cpp
 image: ""

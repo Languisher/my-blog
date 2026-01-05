@@ -1,8 +1,9 @@
 ---
 title: "C++: Operator Overloading, SMFs, Move Semantics, Rule of Zero/Three/Five"
-date: 2026-01-04
-description: ""
-tags: []
+date: 2026-01-10
+description: Stanford CS106L Notes — Spring 2025
+tags:
+  - cpp
 image: ""
 imageAlt: ""
 imageOG: false

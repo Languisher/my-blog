@@ -1,7 +1,7 @@
 ---
 title: "C++ Basics (3): STL Containers, Iterators and Pointers"
-date: 2026-01-04
-description: ""
+date: 2026-01-06
+description: Stanford CS106L Notes — Spring 2025
 tags:
   - cpp
 image: ""

@@ -36,6 +36,27 @@
       "connections": 0
     },
     {
+      "id": "c-basics-6-functions",
+      "type": "post",
+      "title": "C++ Basics (6): Functions and Lambdas",
+      "slug": "c-basics-6-functions",
+      "connections": 0
+    },
+    {
+      "id": "c-operator-overloading-smfs-move-semantics-rule-of-zerothreefive",
+      "type": "post",
+      "title": "C++: Operator Overloading, SMFs, Move Semantics, Rule of Zero/Three/Five",
+      "slug": "c-operator-overloading-smfs-move-semantics-rule-of-zerothreefive",
+      "connections": 0
+    },
+    {
+      "id": "c-raii-smart-pointers",
+      "type": "post",
+      "title": "C++: RAII, Smart Pointers",
+      "slug": "c-raii-smart-pointers",
+      "connections": 0
+    },
+    {
       "id": "llm-parallelism-dp-pp-and-tp-sp",
       "type": "post",
       "title": "LLM Parallelism: DP, PP and TP/SP",
@@ -59,9 +80,9 @@
   ],
   "connections": [],
   "metadata": {
-    "totalPosts": 8,
+    "totalPosts": 11,
     "totalConnections": 0,
     "maxNodesApplied": false,
-    "originalNodeCount": 8
+    "originalNodeCount": 11
   }
 }

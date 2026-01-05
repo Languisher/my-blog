@@ -1,7 +1,7 @@
 ---
 title: "C++ Basics (1): Types, Structs and Objects"
 date: 2026-01-04
-description: ""
+description: Stanford CS106L Notes — Spring 2025
 tags:
   - cpp
 image: ""

@@ -1,7 +1,7 @@
 ---
 title: "C++ Basics (6): Functions and Lambdas"
-date: 2026-01-04
-description: ""
+date: 2026-01-09
+description: Stanford CS106L Notes — Spring 2025
 tags:
   - cpp
 image: ""

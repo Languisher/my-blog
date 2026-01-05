@@ -1,5 +1,5 @@
 ---
-title: "Nano-vLLM"
+title: Nano-vLLM
 date: 2026-01-02
 description: ""
 tags: []
@@ -9,5 +9,5 @@ imageOG: false
 hideCoverImage: false
 hideTOC: false
 targetKeyword: ""
-draft: true
+draft: false
 ---
