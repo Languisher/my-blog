@@ -2,7 +2,8 @@
 title: "C++: RAII, Smart Pointers"
 date: 2026-01-05
 description: ""
-tags: []
+tags:
+  - cpp
 image: ""
 imageAlt: ""
 imageOG: false

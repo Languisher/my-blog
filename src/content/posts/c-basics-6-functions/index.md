@@ -2,7 +2,8 @@
 title: "C++ Basics (6): Functions and Lambdas"
 date: 2026-01-04
 description: ""
-tags: []
+tags:
+  - cpp
 image: ""
 imageAlt: ""
 imageOG: false
