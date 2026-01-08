@@ -5,42 +5,42 @@
       "type": "post",
       "title": "C++ Basics (1): Types, Structs and Objects",
       "slug": "c-basics-1-types-structs-and-objects",
-      "connections": 0
+      "connections": 10
     },
     {
       "id": "c-basics-2-streams",
       "type": "post",
       "title": "C++ Basics (2): Streams",
       "slug": "c-basics-2-streams",
-      "connections": 0
+      "connections": 9
     },
     {
       "id": "c-basics-3-stl-containers",
       "type": "post",
       "title": "C++ Basics (3): STL Containers, Iterators and Pointers",
       "slug": "c-basics-3-stl-containers",
-      "connections": 0
+      "connections": 8
     },
     {
       "id": "c-basics-4-classes",
       "type": "post",
       "title": "C++ Basics (4): Classes",
       "slug": "c-basics-4-classes",
-      "connections": 0
+      "connections": 7
     },
     {
       "id": "c-basics-5-template-classes-and-template-functions",
       "type": "post",
       "title": "C++ Basics (5): Template Classes and Template Functions",
       "slug": "c-basics-5-template-classes-and-template-functions",
-      "connections": 0
+      "connections": 6
     },
     {
       "id": "c-basics-6-functions",
       "type": "post",
       "title": "C++ Basics (6): Functions and Lambdas",
       "slug": "c-basics-6-functions",
-      "connections": 0
+      "connections": 5
     },
     {
       "id": "c-operator-overloading-smfs-move-semantics-rule-of-zerothreefive",
@@ -55,6 +55,20 @@
       "title": "C++: RAII, Smart Pointers",
       "slug": "c-raii-smart-pointers",
       "connections": 0
+    },
+    {
+      "id": "database-1-er-model",
+      "type": "post",
+      "title": "Database (1): ER Model, Relation Model and Relation Algebra",
+      "slug": "database-1-er-model",
+      "connections": 2
+    },
+    {
+      "id": "database-2-sql",
+      "type": "post",
+      "title": "Database (2): SQL",
+      "slug": "database-2-sql",
+      "connections": 1
     },
     {
       "id": "llm-parallelism-dp-pp-and-tp-sp",
@@ -78,11 +92,172 @@
       "connections": 0
     }
   ],
-  "connections": [],
+  "connections": [
+    {
+      "source": "c-basics-1-types-structs-and-objects",
+      "target": "c-basics-2-streams",
+      "type": "link"
+    },
+    {
+      "source": "c-basics-1-types-structs-and-objects",
+      "target": "c-basics-3-stl-containers",
+      "type": "link"
+    },
+    {
+      "source": "c-basics-1-types-structs-and-objects",
+      "target": "c-basics-4-classes",
+      "type": "link"
+    },
+    {
+      "source": "c-basics-1-types-structs-and-objects",
+      "target": "c-basics-5-template-classes-and-template-functions",
+      "type": "link"
+    },
+    {
+      "source": "c-basics-1-types-structs-and-objects",
+      "target": "c-basics-6-functions",
+      "type": "link"
+    },
+    {
+      "source": "c-basics-2-streams",
+      "target": "c-basics-1-types-structs-and-objects",
+      "type": "link"
+    },
+    {
+      "source": "c-basics-2-streams",
+      "target": "c-basics-3-stl-containers",
+      "type": "link"
+    },
+    {
+      "source": "c-basics-2-streams",
+      "target": "c-basics-4-classes",
+      "type": "link"
+    },
+    {
+      "source": "c-basics-2-streams",
+      "target": "c-basics-5-template-classes-and-template-functions",
+      "type": "link"
+    },
+    {
+      "source": "c-basics-2-streams",
+      "target": "c-basics-6-functions",
+      "type": "link"
+    },
+    {
+      "source": "c-basics-3-stl-containers",
+      "target": "c-basics-1-types-structs-and-objects",
+      "type": "link"
+    },
+    {
+      "source": "c-basics-3-stl-containers",
+      "target": "c-basics-2-streams",
+      "type": "link"
+    },
+    {
+      "source": "c-basics-3-stl-containers",
+      "target": "c-basics-4-classes",
+      "type": "link"
+    },
+    {
+      "source": "c-basics-3-stl-containers",
+      "target": "c-basics-5-template-classes-and-template-functions",
+      "type": "link"
+    },
+    {
+      "source": "c-basics-3-stl-containers",
+      "target": "c-basics-6-functions",
+      "type": "link"
+    },
+    {
+      "source": "c-basics-4-classes",
+      "target": "c-basics-1-types-structs-and-objects",
+      "type": "link"
+    },
+    {
+      "source": "c-basics-4-classes",
+      "target": "c-basics-2-streams",
+      "type": "link"
+    },
+    {
+      "source": "c-basics-4-classes",
+      "target": "c-basics-3-stl-containers",
+      "type": "link"
+    },
+    {
+      "source": "c-basics-4-classes",
+      "target": "c-basics-5-template-classes-and-template-functions",
+      "type": "link"
+    },
+    {
+      "source": "c-basics-4-classes",
+      "target": "c-basics-6-functions",
+      "type": "link"
+    },
+    {
+      "source": "c-basics-5-template-classes-and-template-functions",
+      "target": "c-basics-1-types-structs-and-objects",
+      "type": "link"
+    },
+    {
+      "source": "c-basics-5-template-classes-and-template-functions",
+      "target": "c-basics-2-streams",
+      "type": "link"
+    },
+    {
+      "source": "c-basics-5-template-classes-and-template-functions",
+      "target": "c-basics-3-stl-containers",
+      "type": "link"
+    },
+    {
+      "source": "c-basics-5-template-classes-and-template-functions",
+      "target": "c-basics-4-classes",
+      "type": "link"
+    },
+    {
+      "source": "c-basics-5-template-classes-and-template-functions",
+      "target": "c-basics-6-functions",
+      "type": "link"
+    },
+    {
+      "source": "c-basics-6-functions",
+      "target": "c-basics-1-types-structs-and-objects",
+      "type": "link"
+    },
+    {
+      "source": "c-basics-6-functions",
+      "target": "c-basics-2-streams",
+      "type": "link"
+    },
+    {
+      "source": "c-basics-6-functions",
+      "target": "c-basics-3-stl-containers",
+      "type": "link"
+    },
+    {
+      "source": "c-basics-6-functions",
+      "target": "c-basics-4-classes",
+      "type": "link"
+    },
+    {
+      "source": "c-basics-6-functions",
+      "target": "c-basics-5-template-classes-and-template-functions",
+      "type": "link"
+    },
+    {
+      "source": "database-1-er-model",
+      "target": "database-2-sql",
+      "type": "link"
+    },
+    {
+      "source": "database-2-sql",
+      "target": "database-1-er-model",
+      "type": "link"
+    }
+  ],
   "metadata": {
-    "totalPosts": 11,
-    "totalConnections": 0,
+    "totalPosts": 13,
+    "totalConnections": 32,
     "maxNodesApplied": false,
-    "originalNodeCount": 11
+    "originalNodeCount": 13
   }
 }

@@ -207,9 +207,9 @@ export const siteConfig: SiteConfig = {
     source: "local", // "local" for self-hosted @fontsource fonts, "cdn" for Google Fonts CDN
     families: {
       // [CONFIG:FONT_BODY]
-      body: "Inter",      // Body text font family
+      body: "Helvetica Neue",      // Body text font family
       // [CONFIG:FONT_HEADING]
-      heading: "Inter",   // Heading font family  
+      heading: "Helvetica Neue",   // Heading font family  
       // [CONFIG:FONT_MONO]
       mono: "JetBrains Mono", // Monospace font family
     },
