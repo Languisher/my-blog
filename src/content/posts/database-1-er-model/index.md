@@ -12,6 +12,12 @@ hideTOC: false
 targetKeyword: database
 draft: false
 ---
+Database series.
+1. [Database (1): Relation Model and Relation Algebra](posts/database-1-er-model/index.md)
+2. [Database (2): SQL](posts/database-2-sql/index.md)
+3. [Database (3): Transaction Processing](posts/database-4-transactions/index.md)
+
+
 In this note, you will 
 - understand how inter-related data (of the real world) is _modeled_ as relations (schemas and instances), and how relationships between data are _represented_ across relations in a database.
 -  learn how to _query_ these relations using a formal query language.
@@ -24,10 +30,6 @@ Keywords.
 - Key, Superkey, Candidate key, Primary key
 - Relation Algebra (RA)
 - Selection, Projection, Cartesian Product, Join, Union, Intersection, Difference, Division
-
-Database series.
-1. [Database (1): Relation Model and Relation Algebra](posts/database-1-er-model/index.md)
-2. [Database (2): SQL](posts/database-2-sql/index.md)
 
 ## ER Model
 

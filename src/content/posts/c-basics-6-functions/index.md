@@ -20,6 +20,9 @@ C++ Basics Series.
 - [C++ Basics (5): Template Classes and Template Functions](posts/c-basics-5-template-classes-and-template-functions/index.md)
 - [C++ Basics (6): Functions and Lambdas](posts/c-basics-6-functions/index.md)
 
+本文介绍了如何将函数作为可调用对象，并通过在创建可调用对象时捕获其上下文环境，更好地支持泛型编程。
+
+
 Represent functions as variables.
 
 ## History: Predicates
@@ -60,6 +63,19 @@ The $N$ is referred to as the state of the function. We need to give our functio
 
 ![](lambda_syntax.png)
 Lambda syntax. The only difference is the capture clause and the auto-deduction of the type of the return value.
+
+Example.
+
+```cpp
+std::vector<int> v = {1, 3, 5, 7, 9};  
+double n = avgVal(v); // calculate the avg value of the container  
+  
+auto lessThanN = [n](int x) {  
+    return x < n;  
+};  
+  
+int cnt = std::count_if(v.begin(), v.end(), lessThanN);
+```
 
 ### Captures
 

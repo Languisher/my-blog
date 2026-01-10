@@ -19,6 +19,11 @@ C++ Basics Series.
 - [C++ Basics (4): Classes](posts/c-basics-4-classes/index.md)
 - [C++ Basics (5): Template Classes and Template Functions](posts/c-basics-5-template-classes-and-template-functions/index.md)
 - [C++ Basics (6): Functions and Lambdas](posts/c-basics-6-functions/index.md)
+
+在 C++ 中，数据可能来源于、或者想写入屏幕、文件或者字符串中。如何统一面对来源、去向以及数据类型完全不同的数据？
+
+本文简单介绍了 stream 作为统一的 I/O 抽象，stringstream 能够将字符串当作流处理，以及 istream 和 ostream 的用法。其中特别注意 getline 和 <</>> 的用法。
+
 A general input/output abstraction for C++.
 
 ![](stream_intro-1.png)
@@ -33,7 +38,7 @@ Stream inheritance diagram
 ![](stream_io-1.png)
 Input streams and output streams
 
-Example (Extraction). See the next section.
+Examples. See next two sections.
 
 ## Stringstream
 
@@ -54,10 +59,10 @@ ss << initial_quote; // Insert the quote
 std::string first, last, language, extracted_quote;
 ```
 
-*Extraction*.
+**Extraction**.
 - `>>` operator reads until _the next whitespace_.
-  - Skips the leading whitespace 
-  - The terminated whitespace _is left in the stream_.
+- Skips the leading whitespace 
+- The terminated whitespace _is left in the stream_.
 
 
 ![](sstream_exetraction.png)

@@ -1,5 +1,5 @@
 ---
-title: "C++ Basics (1): Types, Structs and Objects"
+title: "C++ Basics (1): Types, Structs, Structured binding and Initialization"
 date: 2026-01-04
 description: Stanford CS106L Notes — Spring 2025
 tags:
@@ -19,6 +19,11 @@ C++ Basics Series.
 - [C++ Basics (4): Classes](posts/c-basics-4-classes/index.md)
 - [C++ Basics (5): Template Classes and Template Functions](posts/c-basics-5-template-classes-and-template-functions/index.md)
 - [C++ Basics (6): Functions and Lambdas](posts/c-basics-6-functions/index.md)
+
+在很多情况下（例如函数需要返回多个结果时），我们希望将多个相关的值**组合为一个整体进行返回**。C++ 提供了多种方式来对多个值进行建模与打包，例如使用 struct、std::pair 和 std::tuple 将多个值组合成一个类型。在调用端，可以通过 **structured binding** 对这些聚合类型进行高效而清晰的解包，从而方便地获取各个返回值。
+
+本文还简单介绍了几种初始化方法，以及推荐使用 **uniform initialization** `{}` 以禁止缩窄转换。
+
 ## Types and Structs
 
 *Keywords*.
@@ -97,24 +102,28 @@ auto it complexType.begin(); // auto = std::map<std::string, std::vector<std::pa
 
 Methods of initialization.
 
-+ *Direct initialization*: `()`
++ **Direct initialization**: `()`
 	```cpp
 	int numOne(12.0); // Direct initialization : doesn't care if 12.0 is a int or not
 	```
-+ *Uniform initialization* (recommended!) : Care about types: `{}`
++ **Uniform initialization** (recommended!) : Care about types: `{}`
 	```cpp
 	int numTwo{12.0}; // Uniform initialization : DOES care, raise error
 	```
 
 ### Structured binding
 
-*Structured Binding*.
+**Structured Binding**.
 - A useful way to initialize some variables from data structures with fixed sizes at compile time
 - Ability to access multiple values returned by a function
 - _But_! Can only use on objects where the _size_ is _known at compile time_.
 
 ![](init_structured_binding-1.png)
 Example (Structured Binding).
+
+> [!note] 如何使用 Structured binding？
+> - 在函数定义时，通常使用 struct 或 std::tuple<...> 作为返回类型，将多个值打包为一个整体；在函数体内，可以在 return 语句中直接使用 {...} 进行 uniform initialization。 
+> - 在调用函数的时候，直接 `auto= [a, b, c] = f();` 进行返回参数解包为多个变量，同时避免拷贝开销
 
 This is identical to use `std::get<i>`:
 

@@ -19,6 +19,9 @@ C++ Basics Series.
 - [C++ Basics (4): Classes](posts/c-basics-4-classes/index.md)
 - [C++ Basics (5): Template Classes and Template Functions](posts/c-basics-5-template-classes-and-template-functions/index.md)
 - [C++ Basics (6): Functions and Lambdas](posts/c-basics-6-functions/index.md)
+
+本文首先介绍了 C++ STL 常用的容器，分别介绍了对应 Python 中的 list(), dict() 的容器，并且对于各容器的优缺点进行了总结；然后介绍了遍历容器的迭代器 Iterator，最后略微提及了可以指向所有类型的指针。
+
 ## Containers
 ### Sequence containers
 
@@ -46,11 +49,11 @@ Modify (Insert/Delete):
   - Only deque: `.push_front(x)`, `.pop_front()`, `.emplace_front(x)`
 Insert (Slow):
   - `v.insert(v.begin() + 2, x)`
-  - `v.erase(v.begin() + 2, x)` -> Iterator
+  - `v.erase(v.begin() + 2, v.begin() + 5)` -> Iterator
 
 #### Others
 
-Others: `std::array<T, N>` (Example: `<std::string, 5>`) More efficienct than `std::vector` since it's memory size is known at compile time thus can be stack allocated.
+Others: `std::array<T, N>` (Example: `std::array<std::string, 5>`) More efficienct than `std::vector` since it's memory size is known at compile time thus can be stack allocated.
 
 ### Associative containers
 
@@ -73,7 +76,7 @@ for (const auto &[key, value] : map) {
 }
 ```
 
-`std::map<K, V>` is implemented as a BST (technically a _red-black tree_), therefore requires `K` to have an operator<#sidenote[`K`, not `V`.].
+`std::map<K, V>` is implemented as a BST (technically a _red-black tree_), therefore requires `K` to have an operator< (`K`, not `V`!).
 
 APIs:
 - Insert: `m[k]=v`, `m.insert({k, v})`, `m.emplace(k, v)`
@@ -83,7 +86,7 @@ APIs:
 #### `std::set`
 
 `std::set<K>`
-- is an amoral `std::map`, which is also a BST
+- is conceptually similar to `std::map`, which is also a BST
 - is an `std::map` without values
 - also requires `K` to have an operator<
 
@@ -158,7 +161,7 @@ Iterator interfaces:
 Note (Difference between `++it` and `it++`).
 - Prefix `++it`: Increments the iterator and returns a reference to the same object
 - Postfix `it++`: Increments it and returns a _copy_ of the old value
-- Better to use postfix than prefix
+- Better to use prefix than postfix to avoid unnecessary value copy.
 
 ### Iterator Types
 All iterators support the basic operations.

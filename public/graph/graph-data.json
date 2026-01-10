@@ -61,14 +61,21 @@
       "type": "post",
       "title": "Database (1): ER Model, Relation Model and Relation Algebra",
       "slug": "database-1-er-model",
-      "connections": 2
+      "connections": 4
     },
     {
       "id": "database-2-sql",
       "type": "post",
       "title": "Database (2): SQL",
       "slug": "database-2-sql",
-      "connections": 1
+      "connections": 3
+    },
+    {
+      "id": "database-4-transactions",
+      "type": "post",
+      "title": "Database (3): Transaction Processing",
+      "slug": "database-4-transactions",
+      "connections": 2
     },
     {
       "id": "llm-parallelism-dp-pp-and-tp-sp",
@@ -89,6 +96,13 @@
       "type": "post",
       "title": "Nano-vLLM",
       "slug": "nano-vllm",
+      "connections": 0
+    },
+    {
+      "id": "sudo-conda",
+      "type": "post",
+      "title": "无 sudo 权限时安装二进制包：Conda",
+      "slug": "sudo-conda",
       "connections": 0
     }
   ],
@@ -249,15 +263,35 @@
       "type": "link"
     },
     {
+      "source": "database-1-er-model",
+      "target": "database-4-transactions",
+      "type": "link"
+    },
+    {
       "source": "database-2-sql",
       "target": "database-1-er-model",
+      "type": "link"
+    },
+    {
+      "source": "database-2-sql",
+      "target": "database-4-transactions",
+      "type": "link"
+    },
+    {
+      "source": "database-4-transactions",
+      "target": "database-1-er-model",
+      "type": "link"
+    },
+    {
+      "source": "database-4-transactions",
+      "target": "database-2-sql",
       "type": "link"
     }
   ],
   "metadata": {
-    "totalPosts": 13,
-    "totalConnections": 32,
+    "totalPosts": 15,
+    "totalConnections": 36,
     "maxNodesApplied": false,
-    "originalNodeCount": 13
+    "originalNodeCount": 15
   }
 }

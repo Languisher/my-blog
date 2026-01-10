@@ -12,10 +12,11 @@ hideTOC: false
 targetKeyword: ""
 draft: true
 ---
-
 Database series.
 1. [Database (1): Relation Model and Relation Algebra](posts/database-1-er-model/index.md)
 2. [Database (2): SQL](posts/database-2-sql/index.md)
+3. [Database (3): Transaction Processing](posts/database-4-transactions/index.md)
+
 
 
 *Overview*.
@@ -236,6 +237,15 @@ Notes:
 - `SELECT` can contain expressions, which are evaluated for each row and returned as result columns. E.g. `SELECT score > 30` will return rows of `TRUE` or `FALSE`
 - Use a relation name prefix to _distinguish_ attributes with the same name. E.g. `SELECT student.name, instructor.name`
 
+### Logical connectives: AND, OR, NOT
+
+`AND`, `OR` and `NOT` can be included in the `WHERE` clause.
+
+```sql
+SELECT ID, name FROM student
+WHERE tot_cred > 30
+AND (dept_name = 'Physics' OR dept_name = 'MUSIC');
+```
 #### String operations: LIKE
 
 _String operations: `LIKE`_. `LIKE` matches a string against a pattern.
@@ -249,7 +259,7 @@ SELECT ID FROM instructor WHERE name LIKE '___';
 SELECT ID FROM instructor WHERE name LIKE 'ab\%cd' ESCAPE '\';
 ```
 
-#### Bag semantics: DISTINCT
+#### Bag semantics, DISTINCT
 
 **Bag semantics**. By default, SQL allows _duplicates_ in query result. Query results may contain duplicate tuples.
 
@@ -280,18 +290,18 @@ _Core idea_. In the FROM clause,
 - Make explicit the logical relationship between tables
 - Efficient joining instead of materialize a cartesian product + selection
 
-##### Basic operations: Theta join and Natural join
+##### Basic operations: JOIN ON and NATURAL JOIN
 
 ```sql 
-R JOIN S ON join_condition;
-R NATURAL JOIN S;
+R JOIN S ON join_condition; -- Theta join
+R NATURAL JOIN S; -- Natural join
 ```
 
 Notes:
 - The `join_condition` should be a predicate 
 - Natural join retains only one copy of each common column 
 
-##### USING
+##### Better natural join: USING
 
 `USING (attribute)` merges columns with the same name (e.g. `R.id = S.id`) and explicitly specifies which attributes are used for the join, thereby preventing unintended matches—especially when multiple natural joins are involved.
 
@@ -316,9 +326,12 @@ _Revision: Join operation $R \Join_\theta S$_. Now we focus on the table $R$. Fo
 
 Instead, when no match exists, we want the attributes from the right table to be filled with NULL values.
 
-*Left outer join of $R$ and $S$*. In this sense, a left outer join can be thought of as extending each row of the left table with attributes from the right table. The number of rows in the result is therefore the same as in the left table. A left outer join between $R$ and $S$ includes both 
-- rows in $R \Join S$
-- _dangling_ $R$ rows padded with NULL's 
+*Left outer join of $R$ and $S$*. In this sense, a left outer join 
+- Can be thought of as extending each row of the left table with attributes from the right table. 
+- The number of rows in the result is therefore the same as in the left table. 
+- A left outer join between $R$ and $S$ includes both 
+	- rows in $R \Join S$
+	- _dangling_ $R$ rows padded with NULL's 
 
 *Right outer join of $R$ and $S$* is similar but this time includes dangling $S$ rows padded with NULL's.
 
@@ -328,6 +341,11 @@ Instead, when no match exists, we want the attributes from the right table to be
 ![](lrouterjoin.png)
 Illustration of left outer join, right outer join and full outer join
 
+```sql
+SELECT *
+FROM course
+NATURAL LEFT OUTER JOIN prereq; -- left outer join
+```
 
 #### Aggregation: COUNT, SUM, AVG ...
 
