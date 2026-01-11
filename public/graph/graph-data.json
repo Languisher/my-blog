@@ -1,9 +1,23 @@
 {
   "nodes": [
     {
+      "id": "algo-basics-prefix-sum",
+      "type": "post",
+      "title": "Algo Basics: Prefix Sum Array 前缀和",
+      "slug": "algo-basics-prefix-sum",
+      "connections": 0
+    },
+    {
+      "id": "array-static-array-and-dynamic-array",
+      "type": "post",
+      "title": "Array: Static Array and Dynamic Array",
+      "slug": "array-static-array-and-dynamic-array",
+      "connections": 0
+    },
+    {
       "id": "c-basics-1-types-structs-and-objects",
       "type": "post",
-      "title": "C++ Basics (1): Types, Structs and Objects",
+      "title": "C++ Basics (1): Types, Structs, Structured binding and Initialization",
       "slug": "c-basics-1-types-structs-and-objects",
       "connections": 10
     },
@@ -76,6 +90,20 @@
       "title": "Database (3): Transaction Processing",
       "slug": "database-4-transactions",
       "connections": 2
+    },
+    {
+      "id": "design-pattern-1-strategy-pattern",
+      "type": "post",
+      "title": "Design Pattern (1): Strategy Pattern",
+      "slug": "design-pattern-1-strategy-pattern",
+      "connections": 0
+    },
+    {
+      "id": "llm-basics-1-tokenizer",
+      "type": "post",
+      "title": "LLM Basics (1): Tokenizer",
+      "slug": "llm-basics-1-tokenizer",
+      "connections": 0
     },
     {
       "id": "llm-parallelism-dp-pp-and-tp-sp",
@@ -289,9 +317,9 @@
     }
   ],
   "metadata": {
-    "totalPosts": 15,
+    "totalPosts": 19,
     "totalConnections": 36,
     "maxNodesApplied": false,
-    "originalNodeCount": 15
+    "originalNodeCount": 19
   }
 }
