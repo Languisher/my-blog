@@ -1,8 +1,9 @@
 ---
-title: "Design Pattern (1): Strategy Pattern"
+title: "Design Patterns (1): Strategy Pattern"
 date: 2026-01-11
 description: ""
-tags: []
+tags:
+  - object-oriented
 image: ""
 imageAlt: ""
 imageOG: false

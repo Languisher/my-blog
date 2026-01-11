@@ -2,7 +2,8 @@
 title: "Algo Basics: Difference Array 差分数组"
 date: 2026-01-11
 description: ""
-tags: []
+tags:
+  - algo
 image: ""
 imageAlt: ""
 imageOG: false
@@ -25,6 +26,7 @@ draft: false
 核心思路
 
 ![](difference_array.png)
+核心思路。需要思考：（1）如何构造差分数组？（2）如何通过差分数组恢复原数据、推导？（3）在 Modify 的时候，需要修改差分数组中的哪两（一）个元素？（4）边界情况检查
 
 **Example [LeetCode 1109](https://leetcode.cn/problems/corporate-flight-bookings/description/)**.
 

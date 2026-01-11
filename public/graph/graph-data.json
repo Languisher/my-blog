@@ -1,6 +1,13 @@
 {
   "nodes": [
     {
+      "id": "algo-basics-difference-array",
+      "type": "post",
+      "title": "Algo Basics: Difference Array 差分数组",
+      "slug": "algo-basics-difference-array",
+      "connections": 1
+    },
+    {
       "id": "algo-basics-prefix-sum",
       "type": "post",
       "title": "Algo Basics: Prefix Sum Array 前缀和",
@@ -96,7 +103,14 @@
       "type": "post",
       "title": "Design Pattern (1): Strategy Pattern",
       "slug": "design-pattern-1-strategy-pattern",
-      "connections": 0
+      "connections": 1
+    },
+    {
+      "id": "design-pattern-2-observer-attern",
+      "type": "post",
+      "title": "Design Pattern (2): Observer Pattern",
+      "slug": "design-pattern-2-observer-attern",
+      "connections": 1
     },
     {
       "id": "llm-basics-1-tokenizer",
@@ -136,6 +150,11 @@
   ],
   "connections": [
     {
+      "source": "algo-basics-difference-array",
+      "target": "algo-basics-prefix-sum",
+      "type": "link"
+    },
+    {
       "source": "c-basics-1-types-structs-and-objects",
       "target": "c-basics-2-streams",
       "type": "link"
@@ -313,13 +332,18 @@
     {
       "source": "database-4-transactions",
       "target": "database-2-sql",
+      "type": "link"
+    },
+    {
+      "source": "design-pattern-2-observer-attern",
+      "target": "design-pattern-1-strategy-pattern",
       "type": "link"
     }
   ],
   "metadata": {
-    "totalPosts": 19,
-    "totalConnections": 36,
+    "totalPosts": 21,
+    "totalConnections": 38,
     "maxNodesApplied": false,
-    "originalNodeCount": 19
+    "originalNodeCount": 21
   }
 }
