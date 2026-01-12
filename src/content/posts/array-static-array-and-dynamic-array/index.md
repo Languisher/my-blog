@@ -3,13 +3,13 @@ title: "Array: Static Array and Dynamic Array"
 date: 2026-01-10
 description: ""
 tags: []
-image: ""
+image: static_array.png
 imageAlt: ""
 imageOG: false
 hideCoverImage: false
 hideTOC: false
 targetKeyword: ""
-draft: true
+draft: false
 ---
 ## 数组
 

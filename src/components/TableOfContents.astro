@@ -17,10 +17,10 @@ const shouldShowTOC = filteredHeadings.length > 1;
 ---
 
 {shouldShowTOC && (
-  <nav class="toc-nav toc-container p-4 pr-5 bg-white dark:bg-primary-900 rounded-xl border border-primary-200 dark:border-primary-700 shadow-lg backdrop-blur-sm bg-opacity-95 dark:bg-opacity-95">
-    <div class="toc-content">
-      <button 
-        class="toc-toggle w-full font-semibold text-primary-900 dark:text-primary-50 mb-3 flex items-center justify-between text-sm hover:text-highlight-600 dark:hover:text-highlight-400 transition-colors"
+  <nav class="toc-nav toc-container p-4 pr-5 bg-white dark:bg-primary-900 rounded-xl border border-primary-200 dark:border-primary-700 shadow-lg backdrop-blur-sm bg-opacity-95 dark:bg-opacity-95 flex flex-col max-h-full">
+    <div class="toc-content flex flex-col min-h-0">
+      <button
+        class="toc-toggle w-full font-semibold text-primary-900 dark:text-primary-50 mb-3 flex items-center justify-between text-sm hover:text-highlight-600 dark:hover:text-highlight-400 transition-colors flex-shrink-0"
         aria-expanded="true"
         aria-controls="toc-list"
       >
@@ -30,11 +30,11 @@ const shouldShowTOC = filteredHeadings.length > 1;
         </div>
         <Icon name="chevron-down" class="w-4 h-4 toc-chevron transition-transform duration-200" />
       </button>
-      
-      <ul class="space-y-2 toc-list" id="toc-list">
+
+      <ul class="space-y-2 toc-list overflow-y-auto flex-1 min-h-0" id="toc-list">
         {filteredHeadings.map(heading => (
           <li class={`toc-item toc-level-${heading.depth}`}>
-            <a 
+            <a
               href={`#${heading.slug}`}
               class="toc-link block text-sm text-primary-600 dark:text-primary-300 hover:text-highlight-600 dark:hover:text-highlight-400 transition-colors py-1 pr-2"
               data-heading={heading.slug}
@@ -182,17 +182,51 @@ const shouldShowTOC = filteredHeadings.length > 1;
   }
   
   .toc-nav {
-    /* No height restrictions - let it flow naturally */
+    /* Allow flexbox layout for scrollable content */
+    display: flex;
+    flex-direction: column;
   }
-  
+
   .toc-content {
-    /* No scrolling needed - content flows naturally */
-    overflow-x: hidden;
-    overflow-y: visible;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+    /* Flexbox container for button and scrollable list */
+    display: flex;
+    flex-direction: column;
+    min-height: 0; /* Critical for flexbox scrolling */
+    overflow: hidden;
     width: 100%;
     box-sizing: border-box;
+  }
+
+  .toc-list {
+    /* Scrollable list area */
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100%;
+    padding-right: 0.5rem; /* Space for scrollbar */
+    box-sizing: border-box;
+    flex: 1;
+    min-height: 0; /* Critical for flexbox scrolling */
+
+    /* Custom scrollbar styling */
+    scrollbar-width: thin;
+    scrollbar-color: rgb(var(--color-primary-300)) transparent;
+  }
+
+  .toc-list::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .toc-list::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .toc-list::-webkit-scrollbar-thumb {
+    background-color: rgb(var(--color-primary-300));
+    border-radius: 3px;
+  }
+
+  .toc-list::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(var(--color-primary-400));
   }
   
   .toc-link {
@@ -248,16 +282,7 @@ const shouldShowTOC = filteredHeadings.length > 1;
       max-width: 100%;
     }
   }
-  
-  /* Prevent horizontal overflow */
-  .toc-list {
-    overflow-x: hidden;
-    overflow-y: visible;
-    width: 100%;
-    padding-right: 0;
-    box-sizing: border-box;
-  }
-  
+
   .toc-item {
     min-width: 0;
     width: 100%;
@@ -265,8 +290,8 @@ const shouldShowTOC = filteredHeadings.length > 1;
     word-break: break-word;
     box-sizing: border-box;
   }
-  
-  
+
+
   .toc-chevron {
     @apply transition-transform duration-200;
   }

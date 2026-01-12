@@ -37,9 +37,6 @@ properties:
 views:
   - type: bases-cms
     name: Posts
-    filters:
-      and:
-        - file.folder.startsWith("posts")
     sort:
       - property: date
         direction: DESC

@@ -5,7 +5,6 @@ description: ""
 tags:
   - llm
   - parallel
-  - code
 image: ""
 imageAlt: ""
 imageOG: false

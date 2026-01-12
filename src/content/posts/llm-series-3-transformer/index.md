@@ -1,16 +1,16 @@
 ---
-title: "LLM Series (3): Transformer"
+title: "LLM Basics (3): Transformer"
 date: 2026-01-13
 description: ""
 tags:
   - llm
-image: ""
+image: transformer_decoder.png
 imageAlt: ""
 imageOG: false
 hideCoverImage: false
 hideTOC: false
-targetKeyword: ""
-draft: true
+targetKeyword:
+draft: false
 ---
 **LLM Series**.
 - [LLM Basics (1): Tokenizer](posts/llm-basics-1-tokenizer/index.md)
@@ -127,6 +127,7 @@ $$
 Be careful with matrix dimensions in the softmax operation.  
 In the case of *multi-head attention*, the scaling factor $\sqrt{d}$ is replaced
 by
+
 $$
 \sqrt{\frac{d}{h}},
 $$

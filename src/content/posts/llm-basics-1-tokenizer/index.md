@@ -4,13 +4,13 @@ date: 2026-01-09
 description: ""
 tags:
   - llm
-image: ""
+image: tokenization.png
 imageAlt: ""
 imageOG: false
 hideCoverImage: false
 hideTOC: false
 targetKeyword: ""
-draft: true
+draft: false
 ---
 本文介绍了 Tokenizer 部件，从 Character-based, byte-based, word-based 方式引入到 BPE Tokenizer，分别介绍它们的优缺点以及提供了对应的实现。
 

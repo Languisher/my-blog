@@ -9,7 +9,7 @@ imageOG: false
 hideCoverImage: false
 hideTOC: false
 targetKeyword: ""
-draft: true
+draft: false
 ---
 Database series.
 1. [Database (1): Relation Model and Relation Algebra](posts/database-1-er-model/index.md)
@@ -179,4 +179,4 @@ Lock(T2, A, X) <-- Blocked, T1 has the lock
 
 ## References
 - [Transaction Processing](https://basics.sjtu.edu.cn/~qyin/teaching/db2024/index.html)
-- [Two Phase Locking Protocol(https://www.geeksforgeeks.org/dbms/two-phase-locking-protocol/)
+- [Two Phase Locking Protocol](https://www.geeksforgeeks.org/dbms/two-phase-locking-protocol/)

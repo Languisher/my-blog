@@ -4,7 +4,7 @@ date: 2026-01-11
 description: ""
 tags:
   - object-oriented
-image: ""
+image: situation_2.png
 imageAlt: ""
 imageOG: false
 hideCoverImage: false

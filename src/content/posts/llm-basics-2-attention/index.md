@@ -4,7 +4,7 @@ date: 2026-01-12
 description: ""
 tags:
   - llm
-image: ""
+image: attention-illu.png
 imageAlt: ""
 imageOG: false
 hideCoverImage: false

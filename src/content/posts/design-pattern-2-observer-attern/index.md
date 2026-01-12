@@ -1,10 +1,10 @@
 ---
 title: "Design Patterns (2): Observer Pattern"
-date: 2026-01-11
+date: 2026-01-12
 description: ""
 tags:
   - object-oriented
-image: ""
+image: observer_pattern_uml.png
 imageAlt: ""
 imageOG: false
 hideCoverImage: false

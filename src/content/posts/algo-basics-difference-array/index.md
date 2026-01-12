@@ -3,8 +3,8 @@ title: "Algo Basics: Difference Array 差分数组"
 date: 2026-01-11
 description: ""
 tags:
-  - algo
-image: ""
+  - data-structure-and-algorithm
+image: difference_array.png
 imageAlt: ""
 imageOG: false
 hideCoverImage: false

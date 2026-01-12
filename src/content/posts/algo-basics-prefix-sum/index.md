@@ -3,8 +3,8 @@ title: "Algo Basics: Prefix Sum Array 前缀和"
 date: 2026-01-10
 description: ""
 tags:
-  - algo
-image: ""
+  - data-structure-and-algorithm
+image: prefix_sum_array_summary-1.png
 imageAlt: ""
 imageOG: false
 hideCoverImage: false

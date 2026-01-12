@@ -150,7 +150,7 @@
     {
       "id": "llm-series-3-transformer",
       "type": "post",
-      "title": "LLM Series (3): Transformer",
+      "title": "LLM Basics (3): Transformer",
       "slug": "llm-series-3-transformer",
       "connections": 2
     },

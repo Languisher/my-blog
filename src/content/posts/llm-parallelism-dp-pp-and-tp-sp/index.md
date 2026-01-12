@@ -5,7 +5,7 @@ description: ""
 tags:
   - llm
   - parallel
-image: ""
+image: collective_communication.png
 imageAlt: ""
 imageOG: false
 hideCoverImage: false
