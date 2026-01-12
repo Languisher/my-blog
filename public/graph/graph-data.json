@@ -101,23 +101,37 @@
     {
       "id": "design-pattern-1-strategy-pattern",
       "type": "post",
-      "title": "Design Pattern (1): Strategy Pattern",
+      "title": "Design Patterns (1): Strategy Pattern",
       "slug": "design-pattern-1-strategy-pattern",
-      "connections": 1
+      "connections": 2
     },
     {
       "id": "design-pattern-2-observer-attern",
       "type": "post",
-      "title": "Design Pattern (2): Observer Pattern",
+      "title": "Design Patterns (2): Observer Pattern",
       "slug": "design-pattern-2-observer-attern",
-      "connections": 1
+      "connections": 2
+    },
+    {
+      "id": "design-patterns-3-decorator-pattern",
+      "type": "post",
+      "title": "Design Patterns (3): Decorator Pattern",
+      "slug": "design-patterns-3-decorator-pattern",
+      "connections": 2
     },
     {
       "id": "llm-basics-1-tokenizer",
       "type": "post",
       "title": "LLM Basics (1): Tokenizer",
       "slug": "llm-basics-1-tokenizer",
-      "connections": 0
+      "connections": 2
+    },
+    {
+      "id": "llm-basics-2-attention",
+      "type": "post",
+      "title": "LLM Basics (2): Attention",
+      "slug": "llm-basics-2-attention",
+      "connections": 2
     },
     {
       "id": "llm-parallelism-dp-pp-and-tp-sp",
@@ -132,6 +146,13 @@
       "title": "LLM Parallelism: NCCL Implementation",
       "slug": "llm-parallelism-nccl-implementation",
       "connections": 0
+    },
+    {
+      "id": "llm-series-3-transformer",
+      "type": "post",
+      "title": "LLM Series (3): Transformer",
+      "slug": "llm-series-3-transformer",
+      "connections": 2
     },
     {
       "id": "nano-vllm",
@@ -338,12 +359,37 @@
       "source": "design-pattern-2-observer-attern",
       "target": "design-pattern-1-strategy-pattern",
       "type": "link"
+    },
+    {
+      "source": "design-patterns-3-decorator-pattern",
+      "target": "design-pattern-1-strategy-pattern",
+      "type": "link"
+    },
+    {
+      "source": "design-patterns-3-decorator-pattern",
+      "target": "design-pattern-2-observer-attern",
+      "type": "link"
+    },
+    {
+      "source": "llm-basics-2-attention",
+      "target": "llm-basics-1-tokenizer",
+      "type": "link"
+    },
+    {
+      "source": "llm-series-3-transformer",
+      "target": "llm-basics-1-tokenizer",
+      "type": "link"
+    },
+    {
+      "source": "llm-series-3-transformer",
+      "target": "llm-basics-2-attention",
+      "type": "link"
     }
   ],
   "metadata": {
-    "totalPosts": 21,
-    "totalConnections": 38,
+    "totalPosts": 24,
+    "totalConnections": 43,
     "maxNodesApplied": false,
-    "originalNodeCount": 21
+    "originalNodeCount": 24
   }
 }
