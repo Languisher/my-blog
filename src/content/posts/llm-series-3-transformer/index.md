@@ -15,7 +15,7 @@ draft: false
 **LLM Series**.
 - [LLM Basics (1): Tokenizer](posts/llm-basics-1-tokenizer/index.md)
 - [LLM Basics (2): Attention](posts/llm-basics-2-attention/index.md)
-- [LLM Series (3): Transformer](posts/llm-series-3-transformer/index.md)
+- [LLM Basics (3): Transformer](posts/llm-series-3-transformer/index.md)
 
 
 ## Multi-headed attention
@@ -107,10 +107,7 @@ The same construction applies to $K$ and $V$.
 
 ## Scaled-dot product
 
-When the dimensionality $d$ becomes large, dot products between vectors tend to
-grow in magnitude. In particular, the dot product
-$q_i^\top k_j$, with $Q$ and $K$ normally initialized, grows roughly on the order
-of $\sqrt{d}$.
+When the dimensionality $d$ becomes large, dot products between vectors tend to grow in magnitude. In particular, the dot product $q_i^\top k_j$, with $Q$ and $K$ normally initialized, grows roughly on the order of $\sqrt{d}$.
 
 As a consequence, the inputs to the softmax function can become large, which
 leads to very small gradients and makes optimization difficult.

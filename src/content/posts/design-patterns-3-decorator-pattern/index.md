@@ -13,8 +13,8 @@ targetKeyword: ""
 draft: false
 ---
 **Design patterns series**.
-- [Design Pattern (1): Strategy Pattern](posts/design-pattern-1-strategy-pattern/index.md)
-- [Design Pattern (2): Observer Pattern](posts/design-pattern-2-observer-attern/index.md)
+- [Design Patterns (1): Strategy Pattern](posts/design-pattern-1-strategy-pattern/index.md)
+- [Design Patterns (2): Observer Pattern](posts/design-pattern-2-observer-attern/index.md)
 - [Design Patterns (3): Decorator Pattern](posts/design-patterns-3-decorator-pattern/index.md)
 
 我们已经看到 has-a 是一个比继承强大的功能，而我们之前所介绍的 has-a 都是组合类型的，而我们将看到这不适用于所有的场景。

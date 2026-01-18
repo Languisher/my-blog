@@ -103,14 +103,14 @@
       "type": "post",
       "title": "Design Patterns (1): Strategy Pattern",
       "slug": "design-pattern-1-strategy-pattern",
-      "connections": 2
+      "connections": 4
     },
     {
       "id": "design-pattern-2-observer-attern",
       "type": "post",
       "title": "Design Patterns (2): Observer Pattern",
       "slug": "design-pattern-2-observer-attern",
-      "connections": 2
+      "connections": 3
     },
     {
       "id": "design-patterns-3-decorator-pattern",
@@ -159,6 +159,13 @@
       "type": "post",
       "title": "Nano-vLLM",
       "slug": "nano-vllm",
+      "connections": 0
+    },
+    {
+      "id": "python-post-init",
+      "type": "post",
+      "title": "Python post init",
+      "slug": "python-post-init",
       "connections": 0
     },
     {
@@ -356,8 +363,23 @@
       "type": "link"
     },
     {
+      "source": "design-pattern-1-strategy-pattern",
+      "target": "design-pattern-2-observer-attern",
+      "type": "link"
+    },
+    {
+      "source": "design-pattern-1-strategy-pattern",
+      "target": "design-patterns-3-decorator-pattern",
+      "type": "link"
+    },
+    {
       "source": "design-pattern-2-observer-attern",
       "target": "design-pattern-1-strategy-pattern",
+      "type": "link"
+    },
+    {
+      "source": "design-pattern-2-observer-attern",
+      "target": "design-patterns-3-decorator-pattern",
       "type": "link"
     },
     {
@@ -387,9 +409,9 @@
     }
   ],
   "metadata": {
-    "totalPosts": 24,
-    "totalConnections": 43,
+    "totalPosts": 25,
+    "totalConnections": 46,
     "maxNodesApplied": false,
-    "originalNodeCount": 24
+    "originalNodeCount": 25
   }
 }

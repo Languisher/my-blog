@@ -12,9 +12,10 @@ hideTOC: false
 targetKeyword: ""
 draft: false
 ---
-Design Pattern Series.
-- [Design Pattern (1): Strategy Pattern](posts/design-pattern-1-strategy-pattern/index.md)
-- [Design Pattern (2): Observer Pattern](posts/design-pattern-2-observer-attern/index.md)
+**Design patterns series**.
+- [Design Patterns (1): Strategy Pattern](posts/design-pattern-1-strategy-pattern/index.md)
+- [Design Patterns (2): Observer Pattern](posts/design-pattern-2-observer-attern/index.md)
+- [Design Patterns (3): Decorator Pattern](posts/design-patterns-3-decorator-pattern/index.md)
 
 在许多系统中，数据会持续从上游产生（如传感器、行情源、日志流），而下游存在多个依赖这些数据的组件（如显示、告警、统计分析、预测模块）。
 

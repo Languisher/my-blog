@@ -2,7 +2,8 @@
 title: "Database (3): Transaction Processing"
 date: 2026-01-08
 description: ""
-tags: []
+tags:
+  - database
 image: ""
 imageAlt: ""
 imageOG: false

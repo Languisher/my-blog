@@ -12,6 +12,11 @@ hideTOC: false
 targetKeyword: ""
 draft: false
 ---
+**Design patterns series**.
+- [Design Patterns (1): Strategy Pattern](posts/design-pattern-1-strategy-pattern/index.md)
+- [Design Patterns (2): Observer Pattern](posts/design-pattern-2-observer-attern/index.md)
+- [Design Patterns (3): Decorator Pattern](posts/design-patterns-3-decorator-pattern/index.md)
+
 ## 识别变化的部分，将其分开
 
 设想要实现 Duck 类，然而不是所有的 Duck 都具有相同的行为。与此同时我们知道在不久的将来，可能会有更多类型的鸭子，各自具有各自的 fly() 和 quack() 特性：

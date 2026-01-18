@@ -10,7 +10,7 @@ imageOG: false
 hideCoverImage: false
 hideTOC: false
 targetKeyword: ""
-draft: true
+draft: false
 ---
 Database series.
 1. [Database (1): Relation Model and Relation Algebra](posts/database-1-er-model/index.md)

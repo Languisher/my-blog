@@ -9,3 +9,9 @@ aliases:
   - about-us
 ---
 I'm **Nan Lin**, currently a graduate student at [Shanghai Jiao Tong University](https://www.sjtu.edu.cn/) and [ENSTA, Institut Polytechnique de Paris](https://www.ensta.fr/), where I focus on LLM infrastructure and systems for large-scale AI.
+
+## Education
+
+- 2021-2025 Shanghai Jiao Tong University
+- 2025-2027 Shanghai Jiao Tong University
+- 2025-2027 ENSTA, Institut Polytechnique de Paris
